@@ -1,0 +1,165 @@
+[gd_scene load_steps=15 format=3 uid="uid://bqieky3eg7sjx"]
+
+[ext_resource type="Script" uid="uid://c56nvv0wcx1c1" path="res://ecran_titre.gd" id="1_4ppeh"]
+[ext_resource type="Texture2D" uid="uid://dcibn7nve8wvr" path="res://MakeUp/Couverture.jpg" id="2_l1fsh"]
+[ext_resource type="AudioStream" uid="uid://xg3dydxlr6pk" path="res://sound/music/song_1.mp3" id="3_l1fsh"]
+[ext_resource type="FontFile" uid="uid://c0mnwqlurchsf" path="res://fonts/99/Nineteen Ninety Three 2.woff" id="4_fochm"]
+[ext_resource type="FontFile" uid="uid://dn7dufrwuu10b" path="res://fonts/99/Nineteen Ninety Three.otf" id="4_muui3"]
+[ext_resource type="AudioStream" uid="uid://bdp8k05pawqkf" path="res://sound/Sound actions/error.mp3" id="6_qggtv"]
+
+[sub_resource type="Animation" id="Animation_muui3"]
+resource_name = "apparition"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoileBlanc:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fochm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoileBlanc:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qggtv"]
+_data = {
+&"RESET": SubResource("Animation_fochm"),
+&"apparition": SubResource("Animation_muui3")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fochm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0oi3s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qggtv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxe6g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0isfk"]
+
+[node name="EcranTitre" type="CanvasLayer"]
+script = ExtResource("1_4ppeh")
+
+[node name="FondBlancFixe" type="ColorRect" parent="."]
+offset_left = -236.0
+offset_top = -365.0
+offset_right = 1494.0
+offset_bottom = 899.0
+
+[node name="ImageCouverture" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l1fsh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VoileBlanc" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qggtv")
+}
+autoplay = "apparition"
+
+[node name="MusiqueTitre" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_l1fsh")
+autoplay = true
+
+[node name="FondBlancFixe2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 150)
+offset_left = 298.0
+offset_top = 481.0
+offset_right = 867.0
+offset_bottom = 631.0
+size_flags_vertical = 8
+
+[node name="MenuPrincipal" type="GridContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -127.5
+offset_top = -132.0
+offset_right = 127.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="BtnNouvellePartie" type="Button" parent="MenuPrincipal"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.57700837, 0.5770084, 0.57700837, 1)
+theme_override_colors/font_focus_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_colors/font_hover_color = Color(0.0016494014, 0.0096783135, 0.016020047, 1)
+theme_override_colors/icon_focus_color = Color(0.021434637, 0.021434635, 0.021434633, 1)
+theme_override_fonts/font = ExtResource("4_fochm")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fochm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0oi3s")
+text = "New Game"
+
+[node name="BtnContinuer" type="Button" parent="MenuPrincipal"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.57700837, 0.5770084, 0.57700837, 1)
+theme_override_colors/font_focus_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_colors/font_hover_color = Color(0.0016494014, 0.0096783135, 0.016020047, 1)
+theme_override_colors/icon_focus_color = Color(0.021434637, 0.021434635, 0.021434633, 1)
+theme_override_fonts/font = ExtResource("4_muui3")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qggtv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0oi3s")
+text = "Continuer"
+
+[node name="BtnOptions" type="Button" parent="MenuPrincipal"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.57700837, 0.5770084, 0.57700837, 1)
+theme_override_colors/font_focus_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_colors/font_hover_color = Color(0.0016494014, 0.0096783135, 0.016020047, 1)
+theme_override_colors/icon_focus_color = Color(0.021434637, 0.021434635, 0.021434633, 1)
+theme_override_fonts/font = ExtResource("4_muui3")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nxe6g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0oi3s")
+text = "Options"
+
+[node name="BtnExtras" type="Button" parent="MenuPrincipal"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.57700837, 0.5770084, 0.57700837, 1)
+theme_override_colors/font_focus_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_colors/font_hover_color = Color(0.0016494014, 0.0096783135, 0.016020047, 1)
+theme_override_colors/icon_focus_color = Color(0.021434637, 0.021434635, 0.021434633, 1)
+theme_override_fonts/font = ExtResource("4_muui3")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0isfk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0oi3s")
+text = "Extras"
+
+[node name="SonErreur" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_qggtv")

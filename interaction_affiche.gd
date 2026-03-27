@@ -20,18 +20,18 @@ var page_actuelle : int = 0       # RMemrorise à quelle page on en est
 
 func _ready():
 	boite_ui.hide()
-	#if boite_ui:
-		## placement de la bule
-		#var taille_ecran = get_viewport_rect().size
-		#boite_ui.size = Vector2(taille_ecran.x - 40, 150)
-		#boite_ui.position = Vector2(20, taille_ecran.y - 170)
-		#boite_ui.scale = Vector2(1, 1)
+	if boite_ui:
+		# placement de la bule
+		var taille_ecran = get_viewport_rect().size
+		boite_ui.size = Vector2(taille_ecran.x - 40, 150)
+		boite_ui.position = Vector2(20, taille_ecran.y - 170)
+		boite_ui.scale = Vector2(1, 1)
 		#
-		#if label_texte:
-			#label_texte.size = boite_ui.size
-			#label_texte.position = Vector2(0, 0)
+		if label_texte:
+			label_texte.size = boite_ui.size
+			label_texte.position = Vector2(0, 0)
 			#
-		#boite_ui.hide()
+		boite_ui.hide()
 	
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)

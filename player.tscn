@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://7ou5drynjhag" path="res://Sprite_archives/Sprites/test_grass_color.png" id="4_sweqy"]
 [ext_resource type="FontFile" uid="uid://dn7dufrwuu10b" path="res://fonts/99/Nineteen Ninety Three.otf" id="5_n7ghd"]
 [ext_resource type="Script" uid="uid://b8mrg7jvsswd8" path="res://light_base.gd" id="7_1jxqw"]
-[ext_resource type="AudioStream" uid="uid://xg3dydxlr6pk" path="res://sound/music/song_1.mp3" id="7_dw050"]
 [ext_resource type="Texture2D" uid="uid://br88mko6qtv7c" path="res://Sprite_archives/Sprites/bulle.png" id="8_dw050"]
 [ext_resource type="Script" uid="uid://daw8me5632t8f" path="res://interaction_affiche.gd" id="9_b26j0"]
+[ext_resource type="AudioStream" uid="uid://dhhc5pjrd57os" path="res://sound/music/song_2.mp3" id="9_n7ghd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_urp6f"]
 texture = ExtResource("3_hqtel")
@@ -5041,7 +5041,7 @@ hframes = 25
 vframes = 5
 
 [node name="Ambiance" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_dw050")
+stream = ExtResource("9_n7ghd")
 volume_db = -19.19
 autoplay = true
 
@@ -5056,20 +5056,23 @@ shape = SubResource("RectangleShape2D_n7ghd")
 
 [node name="Micelium" type="Area2D" parent="Affiches"]
 script = ExtResource("9_b26j0")
+pages_de_texte = Array[String](["Le mycelium... J'en ai pas mal entendu parlé.", "Ils pensent vraiment pouvoir traiter ", "tout les déchets avec un champignon \"intelligent\" booster à l'IA?"])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Affiches/Micelium"]
 position = Vector2(72, 177)
 shape = SubResource("RectangleShape2D_n7ghd")
 
-[node name="Police" type="Area2D" parent="Affiches"]
+[node name="OFI" type="Area2D" parent="Affiches"]
 script = ExtResource("9_b26j0")
+pages_de_texte = Array[String](["Une affiche sur l'OFI"])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Affiches/Police"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Affiches/OFI"]
 position = Vector2(26, -14)
 shape = SubResource("RectangleShape2D_n7ghd")
 
 [node name="Defisk" type="Area2D" parent="Affiches"]
 script = ExtResource("9_b26j0")
+pages_de_texte = Array[String](["Defiscalisez vos crypto-actifs avec DEFISK"])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Affiches/Defisk"]
 position = Vector2(24, 177)
