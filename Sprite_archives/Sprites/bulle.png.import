@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhy6umx8njxw7"
-path="res://.godot/imported/trello6211206627680835360 (1).jpg-096fd0b4abc45b58215f24dd309a48a6.ctex"
+uid="uid://br88mko6qtv7c"
+path="res://.godot/imported/bulle.png-6dced6f744a2ca9e4ce1a8a0192694b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite_archives/Sprites/trello6211206627680835360 (1).jpg"
-dest_files=["res://.godot/imported/trello6211206627680835360 (1).jpg-096fd0b4abc45b58215f24dd309a48a6.ctex"]
+source_file="res://Sprite_archives/Sprites/bulle.png"
+dest_files=["res://.godot/imported/bulle.png-6dced6f744a2ca9e4ce1a8a0192694b1.ctex"]
 
 [params]
 

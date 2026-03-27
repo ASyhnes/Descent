@@ -36,7 +36,7 @@ var light_springiness : float = 15.0
 var light_damping : float = 5.0       
 
 func _ready():
-	# On s'assure que le joueur démarre pile au centre d'une case
+	# Verif joueur démarre pile au centre d'une case
 	position = position.snapped(Vector2(tile_size, tile_size))
 	target_position = position
 
@@ -79,7 +79,7 @@ func CheckInput():
 	var input_vector = Input.get_vector("left", "right", "up", "down")
 	
 	if input_vector != Vector2.ZERO:
-		# On verrouille l'axe (pas de diagonales)
+		# Verouillagede l'axe (pas de diagonales)
 		if abs(input_vector.x) > abs(input_vector.y):
 			input_direction = Vector2(sign(input_vector.x), 0)
 		else:
@@ -87,7 +87,7 @@ func CheckInput():
 			
 		cardinal_direction = input_direction
 		
-		# On vérifie si le mur est devant
+		# mur est devant?
 		ray.target_position = input_direction * tile_size
 		ray.force_raycast_update()
 		
@@ -96,10 +96,9 @@ func CheckInput():
 		is_long_idle = false
 		
 		if not ray.is_colliding():
-			# C'EST ICI LE SECRET DU "VIEUX RPG" :
 			# On définit la destination finale (la prochaine tuile)
 			target_position = position + (input_direction * tile_size)
-			# On active le mode mouvement qui interdit de changer d'avis
+			# Activation mode mouvement qui interdit de changer d'avis
 			is_moving = true
 			
 	else:
@@ -109,7 +108,7 @@ func CheckInput():
 
 func AnimMove(delta):
 	# On avance vers la cible d'un pas calculé selon le temps (delta)
-	# Cela garantit une vitesse constante quel que soit l'ordi
+	# Pour vitesse une vitesse constante quel que soit l'ordi
 	var step = move_speed * delta
 	
 	position = position.move_toward(target_position, step)
@@ -117,7 +116,7 @@ func AnimMove(delta):
 	# Une fois arrivé pile sur la case
 	if position == target_position:
 		is_moving = false
-		# On relance CheckInput tout de suite pour permettre
+		# Relance CheckInput tout de suite pour permettre
 		# le mouvement continu si la touche est restée appuyée
 		CheckInput()
 
