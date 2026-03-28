@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://byxsq2v11au1v"]
+[gd_scene load_steps=3 format=3 uid="uid://3wax4ls75ib0"]
 
 [ext_resource type="VideoStream" uid="uid://d1qnktrjsm04w" path="res://MakeUp/modelers.ogv" id="1_fi6m7"]
-[ext_resource type="Script" uid="uid://c00mfj1rvq6ib" path="res://IntroLogo.gd" id="2_si20m"]
+[ext_resource type="Script" path="res://IntroLogo.gd" id="2_si20m"]
 
 [node name="IntroLogo" type="VideoStreamPlayer"]
 anchors_preset = 15
