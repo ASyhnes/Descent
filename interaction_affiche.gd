@@ -45,7 +45,7 @@ func _on_body_exited(body):
 	if body.name == "Player":
 		joueur_proche = false
 		joueur_ref = null 
-		# Sécurité : Si le joueur s'éloigne réinitialise le dialogue
+		#if le joueur s'éloigne réinitialise le dialogue
 		dialogue_actif = false
 		page_actuelle = 0
 		if boite_ui:
@@ -70,17 +70,17 @@ func _input(event):
 			# MOTEUR DIALOGUE
 			
 			if not dialogue_actif:
-				# CAS 1 : La bulle est fermée, on COMMENCE à lire
+				# CAS 1 : La bulle fermée, on COMMENCE à lire
 				dialogue_actif = true
 				page_actuelle = 0
 				label_texte.text = pages_de_texte[page_actuelle]
 				boite_ui.show()
 				
 			else:
-				# CAS 2 : La bulle est déjà ouverte, on PASSE À LA SUITE
-				page_actuelle += 1 # On ajoute +1 page actuelle
+				# CAS 2 : Bulle déjà ouverte, on PASSE À LA SUITE
+				page_actuelle += 1 
 				
-				# Est-ce qu'il reste des pages à lire ?
+				# IF reste pages à lire :
 				if page_actuelle < pages_de_texte.size():
 					# sioui:  On affiche le texte de la nouvelle page
 					label_texte.text = pages_de_texte[page_actuelle]

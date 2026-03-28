@@ -5,7 +5,6 @@ var tile_size : int = 16
 
 # Vitesse de déplacement : 80 pixels/sec = 5 carreaux par seconde.
 #1 carreau = 16 pixels
-# Plus c'est haut, plus il marche vite.
 var move_speed : float = 80.0 
 
 # --- ETAT DU JEU ---
@@ -107,8 +106,6 @@ func CheckInput():
 			is_long_idle = true
 
 func AnimMove(delta):
-	# On avance vers la cible d'un pas calculé selon le temps (delta)
-	# Pour vitesse une vitesse constante quel que soit l'ordi
 	var step = move_speed * delta
 	
 	position = position.move_toward(target_position, step)
@@ -116,8 +113,6 @@ func AnimMove(delta):
 	# Une fois arrivé pile sur la case
 	if position == target_position:
 		is_moving = false
-		# Relance CheckInput tout de suite pour permettre
-		# le mouvement continu si la touche est restée appuyée
 		CheckInput()
 
 func UpdateState():

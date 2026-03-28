@@ -9,7 +9,7 @@ var chemin_jeu : String = "res://player.tscn"
 
 # --- ÉLÉMENTS DU MENU ---
 @onready var menu_principal_font = $FondBlancFixe2 # Le fond blanc derrière les boutons
-@onready var menu_principal = $MenuPrincipal       # La grille des boutons
+@onready var menu_principal = $MenuPrincipal       
 
 # --- BOUTONS ---
 @onready var btn_nouvelle_partie = $MenuPrincipal/BtnNouvellePartie
