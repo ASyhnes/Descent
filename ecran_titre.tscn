@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://c3axp6s1rent2"]
 
-[ext_resource type="Script" path="res://ecran_titre.gd" id="1_4ppeh"]
-[ext_resource type="Texture2D" path="res://MakeUp/Couverture.jpg" id="2_l1fsh"]
+[ext_resource type="Script" uid="uid://c56nvv0wcx1c1" path="res://ecran_titre.gd" id="1_4ppeh"]
+[ext_resource type="Texture2D" uid="uid://bmc3bbvisy74a" path="res://MakeUp/Couverture.jpg" id="2_l1fsh"]
 [ext_resource type="AudioStream" uid="uid://xg3dydxlr6pk" path="res://sound/music/song_1.mp3" id="3_l1fsh"]
 [ext_resource type="FontFile" uid="uid://c0mnwqlurchsf" path="res://fonts/99/Nineteen Ninety Three 2.woff" id="4_fochm"]
 [ext_resource type="FontFile" uid="uid://dn7dufrwuu10b" path="res://fonts/99/Nineteen Ninety Three.otf" id="4_muui3"]
-[ext_resource type="AudioStream" path="res://sound/Sound actions/error.mp3" id="6_qggtv"]
+[ext_resource type="AudioStream" uid="uid://deuk8kfx4i1f3" path="res://sound/Ambiance/freesound_community-error-sound-39539.mp3" id="6_qggtv"]
 
 [sub_resource type="Animation" id="Animation_fochm"]
 length = 0.001

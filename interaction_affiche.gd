@@ -20,18 +20,18 @@ var page_actuelle : int = 0       # RMemrorise à quelle page on en est
 
 func _ready():
 	boite_ui.hide()
-	if boite_ui:
-		# placement de la bule
-		var taille_ecran = get_viewport_rect().size
-		boite_ui.size = Vector2(taille_ecran.x - 40, 150)
-		boite_ui.position = Vector2(20, taille_ecran.y - 170)
-		boite_ui.scale = Vector2(1, 1)
-		#
-		if label_texte:
-			label_texte.size = boite_ui.size
-			label_texte.position = Vector2(0, 0)
-			#
-		boite_ui.hide()
+	#if boite_ui:
+		## placement de la bule
+		#var taille_ecran = get_viewport_rect().size
+		#boite_ui.size = Vector2(taille_ecran.x - 40, 150)
+		#boite_ui.position = Vector2(20, taille_ecran.y - 170)
+		#boite_ui.scale = Vector2(1, 1)
+		##
+		#if label_texte:
+			#label_texte.size = boite_ui.size
+			#label_texte.position = Vector2(0, 0)
+			##
+		#boite_ui.hide()
 	
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
@@ -80,7 +80,7 @@ func _input(event):
 				# CAS 2 : Bulle déjà ouverte, on PASSE À LA SUITE
 				page_actuelle += 1 
 				
-				# IF reste pages à lire :
+				# IF reste pages à lire : 
 				if page_actuelle < pages_de_texte.size():
 					# sioui:  On affiche le texte de la nouvelle page
 					label_texte.text = pages_de_texte[page_actuelle]
