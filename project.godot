@@ -15,6 +15,10 @@ run/main_scene="uid://3wax4ls75ib0"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogueManager="*res://dialogue_manager.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"
