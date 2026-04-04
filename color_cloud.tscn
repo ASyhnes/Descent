@@ -1,28 +1,34 @@
-[gd_scene load_steps=8 format=3 uid="uid://du5ojhelbjlyq"]
+[gd_scene load_steps=9 format=3 uid="uid://du5ojhelbjlyq"]
 
 [ext_resource type="Script" uid="uid://dbw1d4setw01d" path="res://color_cloud.gd" id="1_cum4l"]
 [ext_resource type="Shader" uid="uid://b516lbc2qc6al" path="res://color_cloud.gdshader" id="2_843th"]
+[ext_resource type="Shader" uid="uid://2r4cf03jfkkh" path="res://particle_swarm.gdshader" id="3_gnpdx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gnpdx"]
 shader = ExtResource("2_843th")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_843th"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sxyrn"]
 shader = ExtResource("2_843th")
 
 [sub_resource type="Gradient" id="Gradient_gnpdx"]
-colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0.40145984, 0.7810219)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_sxyrn"]
 gradient = SubResource("Gradient_gnpdx")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.14102565, 0.20940171)
+fill_to = Vector2(1, 0.5)
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_26cxe"]
-particle_flag_disable_z = true
-emission_shape = 1
-emission_sphere_radius = 20.0
-gravity = Vector3(0, 0, 0)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_26cxe"]
+shader = ExtResource("3_gnpdx")
+shader_parameter/target_pos = Vector2(0, 0)
+shader_parameter/springiness = 20.0
+shader_parameter/damping = 1.0
+shader_parameter/randomness = 1000.0
+shader_parameter/cloud_spread = 25.0
+shader_parameter/particle_scale = 0.1
+shader_parameter/fade_distance = 10.0
 
 [node name="ColorCloud" type="Node2D"]
 script = ExtResource("1_cum4l")
@@ -40,10 +46,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Particle_Layer" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
+[node name="MaskViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(2000, 2000)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Particle_Layer"]
-material = SubResource("ShaderMaterial_843th")
+[node name="GPUParticles2D" type="GPUParticles2D" parent="MaskViewport"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_sxyrn")
+rotation = 6.2831855
+amount = 600
+amount_ratio = 0.6537
 texture = SubResource("GradientTexture2D_sxyrn")
-process_material = SubResource("ParticleProcessMaterial_26cxe")
+lifetime = 0.45
+interp_to_end = 0.938
+preprocess = 1.0
+speed_scale = 0.85
+explosiveness = 0.14
+randomness = 0.55
+collision_base_size = 56.26
+process_material = SubResource("ShaderMaterial_26cxe")
+
+[node name="CoreMask" type="Sprite2D" parent="MaskViewport"]

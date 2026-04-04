@@ -9,7 +9,7 @@ var chemin_jeu : String = "res://player.tscn"
 @onready var voile_blanc = $VoileBlanc
 
 # --- ÉLÉMENTS DU MENU ---
-@onready var menu_principal_font = $FondBlancFixe2 # Le petit fond blanc du menu
+@onready var menu_principal_font = $FondBlancFixe2 # fond blanc du menu
 @onready var menu_principal = $MenuPrincipal       # Le GridContainer
 
 # --- BOUTONS ---
@@ -25,7 +25,6 @@ var chemin_jeu : String = "res://player.tscn"
 var menu_est_ouvert : bool = false
 
 func _ready():
-	# 1. Ajustement automatique des fonds à la taille de l'écran
 	var taille_ecran = get_viewport().get_visible_rect().size
 	
 	if fond_blanc_fixe:
