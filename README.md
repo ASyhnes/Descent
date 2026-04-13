@@ -117,4 +117,4 @@ Voici un aperçu des recherches graphiques, concepts et structures qui ont servi
 ![Nyx Structure 2](Extra/Nyx_Structure%20(2).png)
 ![Nyx Structure 3](Extra/Nyx_Structure%20(3).png)
 
-> *Ce document a été généré pour présenter la documentation technique et narrative du projet Descent.*
+> *Ce document a pour objectif de présenter la documentation technique et narrative du projet Descent.*
