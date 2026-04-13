@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://du5ojhelbjlyq"]
+[gd_scene load_steps=10 format=3 uid="uid://du5ojhelbjlyq"]
 
 [ext_resource type="Script" uid="uid://dbw1d4setw01d" path="res://color_cloud.gd" id="1_cum4l"]
 [ext_resource type="Shader" uid="uid://b516lbc2qc6al" path="res://color_cloud.gdshader" id="2_843th"]
@@ -29,6 +29,9 @@ shader_parameter/randomness = 1000.0
 shader_parameter/cloud_spread = 25.0
 shader_parameter/particle_scale = 0.1
 shader_parameter/fade_distance = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gnpdx"]
+radius = 45.93
 
 [node name="ColorCloud" type="Node2D"]
 script = ExtResource("1_cum4l")
@@ -67,3 +70,8 @@ collision_base_size = 56.26
 process_material = SubResource("ShaderMaterial_26cxe")
 
 [node name="CoreMask" type="Sprite2D" parent="MaskViewport"]
+
+[node name="PerceptionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PerceptionArea"]
+shape = SubResource("CircleShape2D_gnpdx")

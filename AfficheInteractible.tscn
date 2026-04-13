@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7lbkmtkummo2"]
 
 [ext_resource type="Script" uid="uid://daw8me5632t8f" path="res://interaction_affiche.gd" id="1_6txxc"]
-[ext_resource type="Texture2D" uid="uid://7ou5drynjhag" path="res://Sprite_archives/Sprites/test_grass_color.png" id="2_02dti"]
+[ext_resource type="Texture2D" uid="uid://7ou5drynjhag" path="res://Stories/SceneLevelZero/Sprite_archives/Sprites/test_grass_color.png" id="2_02dti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7ghd"]
 size = Vector2(17, 41.75)

@@ -1,7 +1,9 @@
 extends Node2D
 
+
 @export var target_path: NodePath
 @onready var target: Node2D = get_node_or_null(target_path)
+@onready var perception_area = $PerceptionArea
 
 @export var anticipation_factor: float = 0.5 
 @export var intent_push_force: float = 40.0 
@@ -60,8 +62,13 @@ func _process(delta: float) -> void:
 	# permet de limiter l'etirement pour que le nuage part etrop loin.
 	total_stretch = total_stretch.limit_length(max_stretch)
 	
-	# On l'applique à la position cible
+# On l'applique à la position cible
 	target_pos += total_stretch
+	
+	# --- LA NOUVELLE LIGNE EST ICI ---
+	# On déplace la zone de détection physique pour qu'elle suive le nuage visuel
+	if perception_area:
+		perception_area.global_position = target_pos
 	
 	# Sécurité anti-disparition
 	if particles:

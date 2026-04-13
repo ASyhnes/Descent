@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0nug406485a0"]
 
 [ext_resource type="Script" uid="uid://dv6k8104ftp1" path="res://dialogue_manager.gd" id="1_iove5"]
-[ext_resource type="Texture2D" uid="uid://br88mko6qtv7c" path="res://Sprite_archives/Sprites/bulle.png" id="2_jslty"]
+[ext_resource type="Texture2D" uid="uid://br88mko6qtv7c" path="res://Stories/SceneLevelZero/Sprite_archives/Sprites/bulle.png" id="2_jslty"]
 [ext_resource type="FontFile" uid="uid://dn7dufrwuu10b" path="res://fonts/99/Nineteen Ninety Three.otf" id="3_jslty"]
 
 [node name="DialogueManager" type="CanvasLayer"]

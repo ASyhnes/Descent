@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://duhx2f8xxkxrp"]
+
+[ext_resource type="Script" uid="uid://dsl3qj5khivls" path="res://SequenceDoor.gd" id="1_rrigu"]
+[ext_resource type="Texture2D" uid="uid://7ou5drynjhag" path="res://Stories/SceneLevelZero/Sprite_archives/Sprites/test_grass_color.png" id="2_eh7cx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7w4y"]
+size = Vector2(32, 32)
+
+[node name="SequenceDoor" type="StaticBody2D"]
+script = ExtResource("1_rrigu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_eh7cx")
+region_enabled = true
+region_rect = Rect2(63.42038, 548.45874, 32.908844, 44.70636)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a7w4y")

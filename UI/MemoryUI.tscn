@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://csv33cbib5wdo"]
+
+[ext_resource type="Script" uid="uid://ccotbe7xx53oo" path="res://UI/MemoryUi.gd" id="1_b7ax0"]
+
+[node name="MemoryUI" type="CanvasLayer"]
+script = ExtResource("1_b7ax0")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="SlotContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2

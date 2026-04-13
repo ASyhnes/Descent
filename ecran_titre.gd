@@ -1,7 +1,7 @@
 extends Node
 
 # --- CONFIGURATION ---
-var chemin_jeu : String = "res://player.tscn"
+var chemin_jeu : String = "res://Stories/player.tscn"
 
 # --- ÉLÉMENTS DE FOND ---
 @onready var fond_blanc_fixe = $FondBlancFixe
