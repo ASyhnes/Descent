@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://86v1wjgfc6bj"]
+[gd_scene load_steps=39 format=4 uid="uid://86v1wjgfc6bj"]
 
 [ext_resource type="Texture2D" uid="uid://i6og35u4lna0" path="res://Personnages/Frederique/Frederique.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://ctdjjcnij5j0i" path="res://Stories/player.gd" id="1_onrkg"]
@@ -16,7 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://b1yydscnngvjk" path="res://Scenes/UI/ouverture_de_jeux.tscn" id="11_nvl01"]
 [ext_resource type="Texture2D" uid="uid://1fqc45tu0n80" path="res://Stories/SceneLevelZero/Sprite_archives/sprite objets/canettejaune.png" id="12_sxy70"]
 [ext_resource type="Texture2D" uid="uid://2022f6bvwdbe" path="res://Stories/SceneLevelZero/Sprite_archives/sprite objets/canettebleu.png" id="14_f50i8"]
-[ext_resource type="PackedScene" uid="uid://ss1f6wtrn2dx" path="res://Stories/SceneLevelZero/Portes/Door_level1.tscn" id="15_sxy70"]
+[ext_resource type="PackedScene" uid="uid://ss1f6wtrn2dx" path="res://Stories/SceneLevelZero/Portes/Door_Level1.tscn" id="15_sxy70"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/SavePoint.tscn" id="99_savept"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dw050"]
 
@@ -4585,3 +4586,6 @@ vframes = 5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-8.25, 3)
 shape = SubResource("RectangleShape2D_nvl01")
+
+[node name="SavePoint" parent="." instance=ExtResource("99_savept")]
+position = Vector2(169, 223)

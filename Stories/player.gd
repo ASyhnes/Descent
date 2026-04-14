@@ -39,6 +39,8 @@ func _ready():
 	# Verif joueur démarre pile au centre d'une case
 	position = position.snapped(Vector2(tile_size, tile_size))
 	target_position = position
+	if interact_ray:
+		interact_ray.hit_from_inside = true
 
 func _process(delta):
 	# 1. LOGIQUE DE DEPLACEMENT ET INTERACTION
@@ -122,6 +124,8 @@ func CheckInteraction():
 				collider.on_player_interact()
 			elif collider is SequenceDoor:
 				collider.on_interact()
+			elif collider is SavePoint:
+				collider.on_interact(self)
 
 func AnimMove(delta):
 	var step = move_speed * delta
@@ -187,3 +191,7 @@ func UpdateAnimation():
 		animation_player.play(anim_name)
 	elif animation_player.has_animation("idle" + suffix):
 		animation_player.play("idle" + suffix)
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Scenes/UI/ecran_titre.tscn")

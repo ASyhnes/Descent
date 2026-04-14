@@ -43,9 +43,14 @@ func _ready():
 	if menu_principal_font:
 		menu_principal_font.hide()
 	
+	# Menu de chargement
+	var load_menu_scene = load("res://Scenes/UI/LoadMenu.tscn")
+	var load_menu_instance = load_menu_scene.instantiate()
+	add_child(load_menu_instance)
+	
 	# 3. Connexion des signaux des boutons
 	btn_nouvelle_partie.pressed.connect(_sur_nouvelle_partie_pressee)
-	btn_continuer.pressed.connect(_sur_bouton_invalide_presse)
+	btn_continuer.pressed.connect(load_menu_instance.ouvrir)
 	btn_options.pressed.connect(_sur_bouton_invalide_presse)
 	btn_extras.pressed.connect(_sur_bouton_invalide_presse)
 

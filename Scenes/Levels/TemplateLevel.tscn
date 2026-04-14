@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://2022f6bvwdbe" path="res://Stories/SceneLevelZero/Sprite_archives/sprite objets/canettebleu.png" id="14_f50i8"]
 [ext_resource type="PackedScene" path="res://Stories/SceneLevelZero/Portes/Door_level1.tscn" id="15_sxy70"]
 
+[ext_resource type="PackedScene" path="res://Scenes/Objects/SavePoint.tscn" id="99_savept"]
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dw050"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_urp6f"]
@@ -4582,3 +4583,6 @@ vframes = 5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-8.25, 3)
 shape = SubResource("RectangleShape2D_nvl01")
+
+[node name="SavePoint" parent="." instance=ExtResource("99_savept")]
+position = Vector2(146, 191)
