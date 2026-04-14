@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bqsrp1u2428x7" path="res://Classes/InteractableItem.gd" id="1_ofkhe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j7y2e"]
-size = Vector2(16, 16)
+size = Vector2(16, 40)
 
 [node name="InteractableItem" type="Area2D"]
 script = ExtResource("1_ofkhe")
@@ -11,4 +11,5 @@ script = ExtResource("1_ofkhe")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_j7y2e")

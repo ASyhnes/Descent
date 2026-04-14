@@ -2,48 +2,75 @@ class_name SequenceDoor
 extends StaticBody2D
 
 @export_group("Configuration Serrure")
-# C'est ici que la magie de l'interface opère ! 
-# Tu pourras définir la taille de la combinaison et l'ordre des IDs.
 @export var required_sequence: Array[int]
 
-@onready var sprite = $Sprite2D
+@export_group("Messages")
+@export_multiline var message_wrong = "C'est verrouillé... L'ordre semble incorrect."
+@export_multiline var message_indices = "Il y a %d objet(s) de la bonne couleur, dont %d bien placé(s)."
+@export_multiline var message_success = "Le mécanisme s'enclenche !"
+@onready var animhaut = $AnimatedSprite2D
+@onready var animbas = $AnimatedSprite2D2
 @onready var collision = $CollisionShape2D
 
+var is_open = false
+
 func _ready():
-	# Dès le lancement, la porte "écoute" les changements de mémoire
-	MemoryManager.memory_changed.connect(verifier_combinaison)
+	if animhaut: animhaut.play("default")
+	if animbas: animbas.play("default2")
 
-func verifier_combinaison():
-	# On récupère la liste des objets actuellement dans l'UI (statut ON)
+func on_interact():
+	if is_open: return
+	
+	# On récupère les résultats de l'analyse
+	var analyse = analyser_memoire()
+	
+	if analyse.correct_position == required_sequence.size() and required_sequence.size() > 0:
+		sequence_ouverture()
+	else:
+		sequence_echec(analyse.correct_color, analyse.correct_position)
+
+func analyser_memoire() -> Dictionary:
 	var current_memory = MemoryManager.get_on_items()
+	var x_couleur = 0
+	var y_position = 0
 	
-	# 1. Vérification rapide : A-t-on le bon nombre d'objets en mémoire ?
-	if current_memory.size() != required_sequence.size():
-		return # Non, la porte reste fermée
-		
-	# 2. Vérification détaillée : Sont-ils dans le bon ordre ?
-	var is_correct = true
+	# On crée une copie de la séquence requise pour marquer les couleurs trouvées
+	var ids_attendus = required_sequence.duplicate()
 	
-	# On parcourt chaque position (0, 1, 2...)
-	for i in range(required_sequence.size()):
-		# Si l'ID de l'objet en mémoire ne correspond pas à l'ID requis à cette place...
-		if current_memory[i].item_id != required_sequence[i]:
-			is_correct = false
-			break # ... on arrête de chercher, c'est faux !
+	# 1. Calcul des bonnes positions (Y)
+	for i in range(min(current_memory.size(), required_sequence.size())):
+		if current_memory[i].item_id == required_sequence[i]:
+			y_position += 1
+	
+	# 2. Calcul des bonnes couleurs totales (X)
+	for item in current_memory:
+		if ids_attendus.has(item.item_id):
+			x_couleur += 1
+			# On enlève l'ID pour ne pas compter deux fois si le joueur a des doublons
+			ids_attendus.erase(item.item_id)
 			
-	# 3. Le Résultat
-	if is_correct:
-		ouvrir_porte()
+	return {"correct_color": x_couleur, "correct_position": y_position}
 
-func ouvrir_porte():
-	print("Séquence correcte ! Ouverture de la porte.")
+func sequence_echec(x: int, y: int):
+	if DialogueManager:
+		# Premier message
+		DialogueManager.afficher_texte(message_wrong)
+		
+		# PAUSE : On attend au moins 1.5 seconde avant de passer à la suite
+		await get_tree().create_timer(1.5).timeout
+		
+		# Deuxième message (On utilise la variable de l'Inspecteur !)
+		var texte_final = message_indices % [x, y]
+		DialogueManager.afficher_texte(texte_final)
+
+func sequence_ouverture():
+	is_open = true
+	if DialogueManager:
+		DialogueManager.afficher_texte(message_success)
+		await get_tree().create_timer(1.0).timeout
 	
-	# Désactive la collision pour laisser passer le joueur
-	# (On utilise set_deferred par sécurité avec le moteur physique)
+	animhaut.play("open")
+	animbas.play("open2")
+	await animhaut.animation_finished
+	await animbas.animation_finished
 	collision.set_deferred("disabled", true)
-	
-	# Cache le sprite (tu pourras remplacer ça par une animation plus tard)
-	sprite.hide()
-	
-	# Optionnel : tu pourrais émettre un son ici, ou vider la mémoire !
-	
