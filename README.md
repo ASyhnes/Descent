@@ -91,6 +91,20 @@ Afin de faciliter la création de niveaux et la conception modulaire sur Godot, 
 * **`Classes/`** : Modèles de données et comportements de base (ex: `InteractableItem`, `SequenceDoor`).
 * **`Assets/`** : Regroupe les ressources artistiques brutes (Shaders graphiques, etc).
 
+### 💾 Méthodologie d'Intégration (Nouveaux Niveaux & Sauvegarde)
+
+Pour qu'un nouveau niveau soit fonctionnel et bénéficie du pont mémoriel (système de sauvegarde, de mémoire et de restauration de l'univers), il vous suffit de respecter ces deux étapes à chaque nouvelle création :
+
+1. **Intégrer le déclencheur de restauration** : Le script attaché au nœud principal de votre nouveau niveau (par exemple le script `playground.gd` situé à la racine) doit **absolument** appeler le `SaveManager` dans sa fonction de démarrage `_ready()` :
+   ```gdscript
+   func _ready():
+       if SaveManager:
+           SaveManager.apply_load(self)
+   ```
+   *(Cette unique ligne ordonne au moteur de repositionner exactement votre personnage, de refusionner ses souvenirs et de ré-ouvrir les portes secrètes selon la sauvegarde en cours !)*
+
+2. **Placer une Borne de Sauvegarde** : Glissez-déposez simplement la scène `Scenes/Objects/SavePoint.tscn` n'importe où dans l'environnement de votre niveau. Ce composant est modulaire et gèrera automatiquement toute la suite.
+
 ---
 
 ## 👥 L'Équipe Modelers
