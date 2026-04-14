@@ -13,20 +13,7 @@ func set_capacity(new_capacity: int):
 
 # --- GESTION DE LA CARTE (LIGHT) ---
 func process_light(item):
-	# Si l'objet est déjà allumé, on le remet à la fin de la file (pour qu'il soit le plus récent)
-	if map_items.has(item):
-		map_items.erase(item)
-		map_items.push_back(item)
-		return
-
-	# Si la mémoire de la carte est pleine, on éteint le plus vieux
-	if map_items.size() >= capacity:
-		var oldest_map_item = map_items.pop_front()
-		if oldest_map_item:
-			oldest_map_item.set_light_visual(false)
-
-	# On ajoute le nouveau et on l'allume
-	map_items.push_back(item)
+	# On allume simplement l'objet, il gèrera son extinction lui-même
 	item.set_light_visual(true)
 
 # --- GESTION DE L'UI (ON) ---

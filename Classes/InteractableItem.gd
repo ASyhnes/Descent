@@ -43,11 +43,23 @@ func _process(_delta):
 	if mask_sprite and mask_sprite.visible:
 		mask_sprite.global_position = sprite.global_position
 
+var light_tween : Tween = null
+
 # --- GESTION VISUELLE DE LA CARTE ---
 func set_light_visual(is_lit: bool):
+	if light_tween:
+		light_tween.kill()
+		
 	if is_lit:
 		sprite.modulate = Color(1, 1, 1)
 		if mask_sprite: mask_sprite.show()
+		
+		# Lance l'extinction progressive
+		light_tween = create_tween()
+		light_tween.tween_property(sprite, "modulate", Color(0.3, 0.3, 0.3), 3.0).set_trans(Tween.TRANS_LINEAR)
+		# Action locale pour cacher le masque à la fin du fade
+		var hide_mask = func(): if mask_sprite: mask_sprite.hide()
+		light_tween.tween_callback(hide_mask)
 	else:
 		sprite.modulate = Color(0.3, 0.3, 0.3)
 		if mask_sprite: mask_sprite.hide()
