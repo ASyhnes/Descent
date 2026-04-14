@@ -1,6 +1,6 @@
 extends Control # Bien vérifier que c'est Control ici !
 
-var prochaine_scene = "res://ecran_titre.tscn"
+var prochaine_scene = "res://Scenes/UI/ecran_titre.tscn"
 
 # Comme le VoileNoir est maintenant un enfant direct de NouvelleRacine :
 @onready var voile = $TextureRect/Label/VoileNoir

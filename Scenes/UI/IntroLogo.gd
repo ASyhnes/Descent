@@ -1,7 +1,7 @@
 extends VideoStreamPlayer
 
 # Le chemin vers ton écran titre
-var chemin_scene_suivante : String = "res://SplashLogo.tscn"
+var chemin_scene_suivante : String = "res://Scenes/UI/SplashLogo.tscn"
 
 func _ready():
 	# Se déclenche quand la vidéo finit

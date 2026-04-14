@@ -76,6 +76,19 @@ $$P_{target}=P_{current}+(V_{smoothed}\times F_{anticipation})+(I_{smoothed}\tim
 
 ---
 
+## 📁 Architecture du Projet
+
+Afin de faciliter la création de niveaux et la conception modulaire sur Godot, les fichiers sont rigoureusement organisés selon la structure suivante :
+
+* **`Core/`** : Contient les scripts fondamentaux et systèmes globaux (Managers, Autoloads, système de dialogue).
+* **`Scenes/UI/`** : Regroupe toutes les interfaces utilisateur (Écran Titre, Ouverture du jeu, Splash Screens).
+* **`Scenes/Objects/`** : Éléments interactifs et décors "prêts à l'emploi" (Affiches interactives, objets ramassables, nuage de couleur).
+* **`Scenes/Levels/`** : Emplacement dédié aux niveaux du jeu. Contient le `TemplateLevel.tscn`, une scène pré-configurée (avec le joueur et la caméra) qu'il suffit de dupliquer pour démarrer rapidement la création d'un nouveau niveau.
+* **`Classes/`** : Modèles de données et comportements de base (ex: `InteractableItem`, `SequenceDoor`).
+* **`Assets/`** : Regroupe les ressources artistiques brutes (Shaders graphiques, etc).
+
+---
+
 ## 👥 L'Équipe Modelers
 
 Le projet est fièrement porté par le collectif **Modelers**, un studio collaboratif visant à accompagner les talents artistiques et à transmettre des compétences en arts narratifs.

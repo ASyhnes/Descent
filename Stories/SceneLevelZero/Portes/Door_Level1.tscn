@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://ss1f6wtrn2dx"]
 
 [ext_resource type="Texture2D" uid="uid://bjtbr4yegcw5t" path="res://Stories/SceneLevelZero/Sprite_archives/Sprites/doors_test.png" id="1_r2k11"]
-[ext_resource type="Script" uid="uid://dsl3qj5khivls" path="res://SequenceDoor.gd" id="1_rrigu"]
+[ext_resource type="Script" uid="uid://dsl3qj5khivls" path="res://Classes/SequenceDoor.gd" id="1_rrigu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1gmi"]
 atlas = ExtResource("1_r2k11")

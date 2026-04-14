@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://du5ojhelbjlyq"]
 
-[ext_resource type="Script" uid="uid://dbw1d4setw01d" path="res://color_cloud.gd" id="1_cum4l"]
-[ext_resource type="Shader" uid="uid://b516lbc2qc6al" path="res://color_cloud.gdshader" id="2_843th"]
-[ext_resource type="Shader" uid="uid://2r4cf03jfkkh" path="res://particle_swarm.gdshader" id="3_gnpdx"]
+[ext_resource type="Script" uid="uid://dbw1d4setw01d" path="res://Scenes/Objects/color_cloud.gd" id="1_cum4l"]
+[ext_resource type="Shader" uid="uid://b516lbc2qc6al" path="res://Scenes/Objects/color_cloud.gdshader" id="2_843th"]
+[ext_resource type="Shader" uid="uid://2r4cf03jfkkh" path="res://Assets/Shaders/particle_swarm.gdshader" id="3_gnpdx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gnpdx"]
 shader = ExtResource("2_843th")

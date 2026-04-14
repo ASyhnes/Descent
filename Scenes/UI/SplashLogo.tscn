@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chxvwa8y4x25j"]
 
 [ext_resource type="Texture2D" uid="uid://dmk21nc4leyny" path="res://MakeUp/B_N secret of life.jpg" id="1_q81bi"]
-[ext_resource type="Script" uid="uid://dfqqt33n0nj3m" path="res://splash_logo.gd" id="2_rchyg"]
+[ext_resource type="Script" uid="uid://dfqqt33n0nj3m" path="res://Scenes/UI/splash_logo.gd" id="2_rchyg"]
 
 [node name="NouvelleRacine" type="Control"]
 layout_mode = 3
