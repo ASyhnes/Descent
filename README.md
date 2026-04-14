@@ -25,9 +25,13 @@ L'action se déroule dans le complexe **Léviathan**, une structure industrielle
 * **Atmosphère :** Un univers « gris, salé et humide » où la technologie oscille entre le Low-tech (matériaux recyclés) et la haute technologie contrôlée par l'OFI (*Other Frequencies Institute*).
 * **Mycélium :** Un champignon développé par l'OFI, reprogrammé à l'aide de réseaux de neurones pour pouvoir digérer et recompacter les déchets.
 
-### La Théorie de l'Ombre
+### La Théorie de l'Ombre et Anthropie de la réalité
 
 L'univers de *Descent* repose sur une physique alternative. Ici, la gravité n'est pas une force d'attraction, mais une pression exercée par le vide. Selon cette théorie, la "chute" est simplement le vide cherchant à se combler — une métaphore directe de la trajectoire du protagoniste.
+
+La réalité, telle que nous l'entendons, est régie par un ensemble de règles mathématiques qui permettent de la définir. Dans cet univers, l'Other Frequencies Institute (OFI) étudie l'anthropie de ces règles. La problématique soulevée par cette anthropie est vertigineuse : la transformation de ces règles est humainement imperceptible, car elle implique une refonte de leur propre définition au sein même de notre observation. 
+
+Mais un scientifique a eu un jour une puissante intuition : et si les abeilles ne faisaient pas des alvéoles triangulaires à la base... ?
 
 ### Le Récit : La Descente de Frédérique
 
