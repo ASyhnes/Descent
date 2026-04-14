@@ -27,11 +27,11 @@ L'action se déroule dans le complexe **Léviathan**, une structure industrielle
 
 ### La Théorie de l'Ombre et Anthropie de la réalité
 
-L'univers de *Descent* repose sur une physique alternative. Ici, la gravité n'est pas une force d'attraction, mais une pression exercée par le vide. Selon cette théorie, la "chute" est simplement le vide cherchant à se combler — une métaphore directe de la trajectoire du protagoniste.
+L'univers de *Descent* repose sur une physique alternative. Ici, la gravité n'est pas une force d'attraction, mais une pression exercée par le vide. Selon cette théorie, la "chute" est simplement le vide cherchant à se combler — une métaphore directe de la trajectoire du protagoniste. *(Concept librement inspiré des travaux théoriques d'**Erik Verlinde** sur la gravité entropique en 2010, postulant que la gravité n'est pas une force fondamentale mais un phénomène émergent de la thermodynamique et de l'information).*
 
-La réalité, telle que nous l'entendons, est régie par un ensemble de règles mathématiques qui permettent de la définir. Dans cet univers, l'Other Frequencies Institute (OFI) étudie l'anthropie de ces règles. La problématique soulevée par cette anthropie est vertigineuse : la transformation de ces règles est humainement imperceptible, car elle implique une refonte de leur propre définition au sein même de notre observation. 
+La réalité, telle que nous l'entendons, est régie par un ensemble de règles mathématiques qui permettent de la définir. Dans cet univers, l'Other Frequencies Institute (OFI) étudie l'**anthropie** de ces règles *(faisant directement résonance au Principe Anthropique Participatif défini par le théoricien **John Archibald Wheeler**, postulant que l'univers a besoin d'observateurs conscients pour exister formellement)*. La problématique soulevée par cette anthropie est vertigineuse : la transformation de ces règles est humainement imperceptible, car elle implique une refonte de leur propre définition au sein même de notre observation. 
 
-Mais un scientifique a eu un jour une puissante intuition : et si les abeilles ne faisaient pas des alvéoles triangulaires à la base... ?
+L'étude de ce phénomène par l'OFI a ouvert de très nombreuses portes d'un point de vue technologique, redéfinissant jusqu'à la définition même de la conscience. Mais un scientifique a eu un jour une puissante intuition : et si les abeilles ne faisaient pas des alvéoles triangulaires à la base... ?
 
 ### Le Récit : La Descente de Frédérique
 
