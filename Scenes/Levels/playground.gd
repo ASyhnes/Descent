@@ -6,6 +6,8 @@ extends Node2D
 
 func _ready():
 	print("Niveau chargé, nouveau système de couleur actif.")
+	if SaveManager:
+		SaveManager.apply_load(self)
 
 func _process(_delta):
 	# Plus besoin de scanner les tuiles ici !
