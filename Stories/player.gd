@@ -119,13 +119,27 @@ func CheckInteraction():
 		
 		# Si on appuie sur le bouton d'action
 		if Input.is_action_just_pressed("ui_accept"):
+			print("[DEBUG INTERACTION] ui_accept pressé !")
+			if collider:
+				print("[DEBUG INTERACTION] Collider touché : ", collider.name, " | Classe : ", collider.get_class())
+			else:
+				print("[DEBUG INTERACTION] Aucun collider récupéré.")
+				
 			# On vérifie ce qu'on a touché
 			if collider is InteractableItem:
+				print("[DEBUG INTERACTION] Traité comme InteractableItem.")
 				collider.on_player_interact()
 			elif collider is SequenceDoor:
+				print("[DEBUG INTERACTION] Traité comme SequenceDoor.")
 				collider.on_interact()
 			elif collider is SavePoint:
+				print("[DEBUG INTERACTION] Traité comme SavePoint.")
 				collider.on_interact(self)
+			else:
+				print("[DEBUG INTERACTION] L'objet n'est reconnu par aucun type interactif connu.")
+		
+		# DEBUG visuel continu si besoin (optionnel)
+		# print("Raycast pointe vers: ", collider.name if collider else "Rien")
 
 func AnimMove(delta):
 	var step = move_speed * delta

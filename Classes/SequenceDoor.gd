@@ -59,6 +59,10 @@ func sequence_echec(x: int, y: int):
 		# PAUSE : On attend au moins 1.5 seconde avant de passer à la suite
 		await get_tree().create_timer(1.5).timeout
 		
+		# Si le joueur a fermé la fenêtre (en s'éloignant ou en appuyant sur Action), on arrête là.
+		if not DialogueManager.visible:
+			return
+			
 		# Deuxième message (On utilise la variable de l'Inspecteur !)
 		var texte_final = message_indices % [x, y]
 		DialogueManager.afficher_texte(texte_final)

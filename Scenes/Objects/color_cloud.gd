@@ -25,6 +25,11 @@ func _ready():
 	if target:
 		last_target_pos = target.global_position
 		
+		# On s'assure que le raycast du joueur ignore la zone de particules !
+		var raycast = target.get_node_or_null("InteractionRay")
+		if raycast and perception_area:
+			raycast.add_exception(perception_area)
+			
 	mask_viewport.size = get_viewport().get_visible_rect().size
 	
 	await get_tree().process_frame

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://86v1wjgfc6bj"]
+[gd_scene load_steps=41 format=4 uid="uid://86v1wjgfc6bj"]
 
 [ext_resource type="Texture2D" uid="uid://i6og35u4lna0" path="res://Personnages/Frederique/Frederique.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://ctdjjcnij5j0i" path="res://Stories/player.gd" id="1_onrkg"]
@@ -16,7 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://b1yydscnngvjk" path="res://Scenes/UI/ouverture_de_jeux.tscn" id="11_nvl01"]
 [ext_resource type="Texture2D" uid="uid://1fqc45tu0n80" path="res://Stories/SceneLevelZero/Sprite_archives/sprite objets/canettejaune.png" id="12_sxy70"]
 [ext_resource type="Texture2D" uid="uid://2022f6bvwdbe" path="res://Stories/SceneLevelZero/Sprite_archives/sprite objets/canettebleu.png" id="14_f50i8"]
+[ext_resource type="PackedScene" uid="uid://d26mr1ivn70jv" path="res://Stories/SceneLevelZero/Objets/cannetteorange.tscn" id="15_ray2p"]
 [ext_resource type="PackedScene" uid="uid://ss1f6wtrn2dx" path="res://Stories/SceneLevelZero/Portes/Door_Level1.tscn" id="15_sxy70"]
+[ext_resource type="Texture2D" uid="uid://chu33i3weqfm5" path="res://Stories/SceneLevelZero/Sprite_archives/sprite objets/canetteorange.png" id="16_1obsa"]
 [ext_resource type="PackedScene" uid="uid://csavepoint002" path="res://Scenes/Objects/SavePoint.tscn" id="99_savept"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dw050"]
@@ -4281,7 +4283,7 @@ texture = ExtResource("4_sweqy")
 sources/0 = SubResource("TileSetAtlasSource_1jxqw")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7ghd"]
-size = Vector2(13.5, 41.75)
+size = Vector2(13, 24)
 
 [sub_resource type="Animation" id="Animation_onrkg"]
 length = 0.001
@@ -4481,7 +4483,7 @@ script = ExtResource("9_b26j0")
 pages_de_texte = Array[String](["Une vieille affiche de propagande ...", "...", "L'image est à moitiée effacée."])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Affiches/Vielle Affiche"]
-position = Vector2(121.75, -14)
+position = Vector2(121, -10)
 shape = SubResource("RectangleShape2D_n7ghd")
 
 [node name="Micelium" type="Area2D" parent="Affiches"]
@@ -4514,7 +4516,7 @@ script = ExtResource("9_b26j0")
 pages_de_texte = Array[String](["Docteur Thiestel, spécialiste TSA/TDHA", "mince....", "j'ai encore oublié de prendre un rendez vous"])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Affiches/Doc TSA"]
-position = Vector2(-16, -24)
+position = Vector2(-15.5, -13)
 shape = SubResource("RectangleShape2D_n7ghd")
 
 [node name="ColorCloud" parent="." instance=ExtResource("10_n7ghd")]
@@ -4527,37 +4529,38 @@ visible = false
 
 [node name="OBJ_cannetterouge" parent="." instance=ExtResource("10_sn7nk")]
 z_index = 1
-position = Vector2(169, 40)
+position = Vector2(155, -11)
 is_blocking = true
 interaction_text = "un bouton rouge ..."
 
 [node name="ibj_cnetteverte" parent="." instance=ExtResource("9_cm2yy")]
-position = Vector2(169, 84)
+position = Vector2(-39, -25)
 item_id = 2
 item_icon = ExtResource("10_d470o")
 is_blocking = true
 interaction_text = "un bouton vert ..."
 
 [node name="obj_cannettejaune" parent="." instance=ExtResource("10_4r2uk")]
-position = Vector2(10, -15)
+position = Vector2(-7, -25)
 item_id = 3
 item_icon = ExtResource("12_sxy70")
 interaction_text = "un boutn jaune ..."
 
 [node name="obj_canettebleue" parent="." instance=ExtResource("11_f0fx3")]
-position = Vector2(138, 41)
+position = Vector2(74, -25)
 item_id = 4
 item_icon = ExtResource("14_f50i8")
 is_blocking = true
+interaction_text = "un bouton bleu (test)"
 
-[node name="obj_canettebleue2" parent="." instance=ExtResource("11_f0fx3")]
-position = Vector2(138, 88)
+[node name="obj_canetteorange" parent="." instance=ExtResource("15_ray2p")]
+position = Vector2(-70, -25)
 item_id = 0
-item_icon = ExtResource("14_f50i8")
-is_blocking = true
+item_icon = ExtResource("16_1obsa")
+interaction_text = "Un bouton orange (test)"
 
 [node name="SequenceDoor" parent="." instance=ExtResource("15_sxy70")]
-position = Vector2(146, 143)
+position = Vector2(146, 120)
 required_sequence = Array[int]([0, 1, 2])
 message_wrong = "C'est verrouillé... Il me demande une combinaison..."
 
@@ -4586,7 +4589,7 @@ zoom = Vector2(4, 4)
 process_callback = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(-6, -11.000001)
+position = Vector2(-8, -11.000001)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_4flbx")
 hframes = 25

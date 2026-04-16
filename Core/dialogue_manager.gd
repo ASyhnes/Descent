@@ -31,3 +31,8 @@ func afficher_texte(contenu: String):
 
 func fermer():
 	hide()
+
+func _unhandled_input(event):
+	if visible and event.is_action_pressed("ui_accept"):
+		get_viewport().set_input_as_handled()
+		call_deferred("fermer")

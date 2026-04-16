@@ -97,7 +97,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a7w4y"]
-size = Vector2(32, 32)
+size = Vector2(32, 34)
 
 [node name="SequenceDoor2" type="StaticBody2D"]
 script = ExtResource("1_rrigu")
@@ -113,4 +113,5 @@ sprite_frames = SubResource("SpriteFrames_mia01")
 animation = &"default2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_a7w4y")
