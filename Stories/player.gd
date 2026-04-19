@@ -105,41 +105,45 @@ func CheckInput():
 			is_long_idle = true
 
 func CheckInteraction():
-	# --- NOUVEAUTÉ 2 : BLOQUER LE RAYCAST SI ON LIT UN TEXTE ---
-	# On laisse le DialogueManager gérer la touche Action tout seul !
-	if DialogueManager and DialogueManager.visible:
-		return 
-
-	# On pointe le rayon d'interaction devant le joueur
 	interact_ray.target_position = cardinal_direction * tile_size
 	interact_ray.force_raycast_update()
-	
-	if interact_ray.is_colliding():
-		var collider = interact_ray.get_collider()
-		
-		# Si on appuie sur le bouton d'action
-		if Input.is_action_just_pressed("ui_accept"):
-			print("[DEBUG INTERACTION] ui_accept pressé !")
-			if collider:
-				print("[DEBUG INTERACTION] Collider touché : ", collider.name, " | Classe : ", collider.get_class())
+
+	# On ne traite que si ui_accept vient d'être pressé
+	if not Input.is_action_just_pressed("ui_accept"):
+		return
+
+	# === CAS 1 : Un dialogue est déjà affiché ===
+	if DialogueManager and DialogueManager.visible:
+		if DialogueManager.is_typing:
+			# Le texte s'écrit encore → on l'affiche en entier d'un coup
+			DialogueManager.completer_texte()
+		else:
+			# Texte complet affiché → on avance ou on ferme
+			var prop = DialogueManager.get_proprietaire()
+			if prop and prop.has_method("on_dialogue_advance"):
+				prop.on_dialogue_advance()
 			else:
-				print("[DEBUG INTERACTION] Aucun collider récupéré.")
-				
-			# On vérifie ce qu'on a touché
-			if collider is InteractableItem:
-				print("[DEBUG INTERACTION] Traité comme InteractableItem.")
-				collider.on_player_interact()
-			elif collider is SequenceDoor:
-				print("[DEBUG INTERACTION] Traité comme SequenceDoor.")
-				collider.on_interact()
-			elif collider is SavePoint:
-				print("[DEBUG INTERACTION] Traité comme SavePoint.")
-				collider.on_interact(self)
-			else:
-				print("[DEBUG INTERACTION] L'objet n'est reconnu par aucun type interactif connu.")
-		
-		# DEBUG visuel continu si besoin (optionnel)
-		# print("Raycast pointe vers: ", collider.name if collider else "Rien")
+				DialogueManager.fermer()
+		return  # Ne pas déclencher de nouvelle interaction ce frame
+
+	# === CAS 2 : Pas de dialogue, on déclenche une interaction ===
+	if not interact_ray.is_colliding():
+		return
+
+	var collider = interact_ray.get_collider()
+	print("[DEBUG INTERACTION] Collider touché : ", collider.name, " | Classe : ", collider.get_class())
+
+	if collider is InteractableItem:
+		collider.on_player_interact()
+	elif collider is SequenceDoor:
+		collider.on_interact()
+	elif collider is SavePoint:
+		collider.on_interact(self)
+	elif collider is AfficheInteractible:
+		collider.on_interact()
+	else:
+		print("[DEBUG INTERACTION] L'objet n'est reconnu par aucun type interactif connu.")
+
 
 func AnimMove(delta):
 	var step = move_speed * delta

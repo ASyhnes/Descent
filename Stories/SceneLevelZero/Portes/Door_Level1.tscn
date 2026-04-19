@@ -97,21 +97,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a7w4y"]
-size = Vector2(32, 34)
+size = Vector2(32, 31)
 
 [node name="SequenceDoor2" type="StaticBody2D"]
 script = ExtResource("1_rrigu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
-position = Vector2(0, -10)
+position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_mia01")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 14)
+position = Vector2(0, 17)
 sprite_frames = SubResource("SpriteFrames_mia01")
 animation = &"default2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_a7w4y")

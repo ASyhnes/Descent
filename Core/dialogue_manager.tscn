@@ -52,5 +52,5 @@ theme_override_colors/default_color = Color(0.00045968732, 1.4541456e-10, 4.7002
 theme_override_fonts/normal_font = ExtResource("3_jslty")
 theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
-horizontal_alignment = 1
+horizontal_alignment = 0
 vertical_alignment = 1

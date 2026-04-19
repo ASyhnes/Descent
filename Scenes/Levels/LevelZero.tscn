@@ -4523,7 +4523,6 @@ shape = SubResource("RectangleShape2D_n7ghd")
 target_path = NodePath("../Player")
 
 [node name="OuvertureDeJeu" parent="." instance=ExtResource("11_nvl01")]
-visible = false
 
 [node name="MemoryUI" parent="." instance=ExtResource("7_6dqev")]
 
@@ -4589,7 +4588,7 @@ zoom = Vector2(4, 4)
 process_callback = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(-8, -11.000001)
+position = Vector2(-6, -11.000001)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_4flbx")
 hframes = 25
