@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="ExtraData" load_steps=10 format=3 uid="uid://cuk0ksm3rs036"]
+[gd_resource type="Resource" script_class="ExtraData" load_steps=15 format=3 uid="uid://cuk0ksm3rs036"]
 
 [ext_resource type="Script" uid="uid://cxiis53celrkx" path="res://Extra/ExtraContentBlock.gd" id="1_ecb"]
 [ext_resource type="Script" uid="uid://b60j8hvtsxx31" path="res://Extra/ExtraData.gd" id="2_ed"]
 [ext_resource type="Texture2D" uid="uid://yic0d21p2ixu" path="res://Extra/frederique_example/Frederique_Da_Sylva.jpg" id="3_img"]
+[ext_resource type="Texture2D" uid="uid://ivqrtrgtas8w" path="res://Extra/frederique_example/fred_1.jpg" id="4_ccrb2"]
 [ext_resource type="Texture2D" uid="uid://bc0xu73ugxrw7" path="res://Extra/frederique_example/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg" id="4_img"]
 [ext_resource type="Texture2D" uid="uid://bm8dlbr2q5axl" path="res://Extra/frederique_example/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg" id="5_img"]
+[ext_resource type="Texture2D" uid="uid://b4647s65wj8hv" path="res://Extra/frederique_example/fred_3.jpg" id="5_op0tb"]
 
 [sub_resource type="Resource" id="Resource_text"]
 script = ExtResource("1_ecb")
@@ -27,10 +29,27 @@ text_content = "texte test présentation personnage
 "
 metadata/_custom_type_script = "uid://cxiis53celrkx"
 
+[sub_resource type="Resource" id="Resource_a2bi4"]
+script = ExtResource("1_ecb")
+type = 1
+image_content = ExtResource("4_ccrb2")
+metadata/_custom_type_script = "uid://cxiis53celrkx"
+
+[sub_resource type="Resource" id="Resource_nbu5p"]
+script = ExtResource("1_ecb")
+text_content = "encore un texte de test"
+metadata/_custom_type_script = "uid://cxiis53celrkx"
+
+[sub_resource type="Resource" id="Resource_p5c7f"]
+script = ExtResource("1_ecb")
+type = 1
+image_content = ExtResource("5_op0tb")
+metadata/_custom_type_script = "uid://cxiis53celrkx"
+
 [resource]
 script = ExtResource("2_ed")
 title = "Design de Frédérique"
 thumbnail = ExtResource("3_img")
 context_text = "Développement visuel du personnage de Frédérique. Différentes pistes explorées durant la pré-production."
-content_blocks = Array[ExtResource("1_ecb")]([SubResource("Resource_text"), SubResource("Resource_img1"), SubResource("Resource_img2"), SubResource("Resource_2rniw")])
+content_blocks = Array[ExtResource("1_ecb")]([SubResource("Resource_text"), SubResource("Resource_img1"), SubResource("Resource_img2"), SubResource("Resource_2rniw"), SubResource("Resource_a2bi4"), SubResource("Resource_nbu5p"), SubResource("Resource_p5c7f")])
 is_unlocked = true

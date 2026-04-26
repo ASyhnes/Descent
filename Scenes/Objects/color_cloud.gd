@@ -34,6 +34,10 @@ func _ready():
 	await get_tree().process_frame
 	
 	bw_rect.material.set_shader_parameter("mask_texture", mask_viewport.get_texture())
+	
+	# Force le nuage à s'émettre dès le début, sans attendre la pression d'une touche
+	if particles:
+		particles.restart()
 
 func _process(delta: float) -> void:
 	if not target:

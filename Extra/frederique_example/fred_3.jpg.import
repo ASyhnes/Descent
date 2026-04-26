@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwkbqptp1mdvc"
-path="res://.godot/imported/QUARTIER BAS FOND.jpg-83bdc0c3f8d313d22ef3845439b714d2.ctex"
+uid="uid://b4647s65wj8hv"
+path="res://.godot/imported/fred_3.jpg-2203753ff465ace7660314ecf959c674.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Extra/QUARTIER BAS FOND.jpg"
-dest_files=["res://.godot/imported/QUARTIER BAS FOND.jpg-83bdc0c3f8d313d22ef3845439b714d2.ctex"]
+source_file="res://Extra/frederique_example/fred_3.jpg"
+dest_files=["res://.godot/imported/fred_3.jpg-2203753ff465ace7660314ecf959c674.ctex"]
 
 [params]
 
