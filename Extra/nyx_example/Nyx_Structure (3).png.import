@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dq1q0fm0jw6qd"
-path="res://.godot/imported/Nyx_Structure (3).png-6a74bf1a04ce41dbcc24243f038e64fc.ctex"
+path="res://.godot/imported/Nyx_Structure (3).png-1c8a403521bef3c4afdb517dbba3b96f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Extra/Nyx_Structure (3).png"
-dest_files=["res://.godot/imported/Nyx_Structure (3).png-6a74bf1a04ce41dbcc24243f038e64fc.ctex"]
+source_file="res://Extra/nyx_example/Nyx_Structure (3).png"
+dest_files=["res://.godot/imported/Nyx_Structure (3).png-1c8a403521bef3c4afdb517dbba3b96f.ctex"]
 
 [params]
 

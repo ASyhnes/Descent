@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="ExtraData" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://Extra/ExtraContentBlock.gd" id="1_ecb"]
+[ext_resource type="Script" path="res://Extra/ExtraData.gd" id="2_ed"]
+[ext_resource type="Texture2D" path="res://Extra/nyx_example/Nyx_Structure (1).png" id="3_img"]
+[ext_resource type="Texture2D" path="res://Extra/nyx_example/Nyx_Structure (2).png" id="4_img"]
+[ext_resource type="Texture2D" path="res://Extra/nyx_example/Nyx_Structure (3).png" id="5_img"]
+
+[sub_resource type="Resource" id="Resource_text"]
+script = ExtResource("1_ecb")
+type = 0
+text_content = "Le concept art initial de l'environnement de Nyx, montrant l'évolution architecturale et la gestion des couleurs sombres typiques du niveau."
+
+[sub_resource type="Resource" id="Resource_img1"]
+script = ExtResource("1_ecb")
+type = 1
+text_content = ""
+image_content = ExtResource("4_img")
+
+[sub_resource type="Resource" id="Resource_img2"]
+script = ExtResource("1_ecb")
+type = 1
+text_content = ""
+image_content = ExtResource("5_img")
+
+[resource]
+script = ExtResource("2_ed")
+title = "Structures de Nyx"
+thumbnail = ExtResource("3_img")
+context_text = "Études architecturales pour les décors de Nyx."
+content_blocks = Array[ExtResource("1_ecb")]([SubResource("Resource_text"), SubResource("Resource_img1"), SubResource("Resource_img2")])
+is_unlocked = true

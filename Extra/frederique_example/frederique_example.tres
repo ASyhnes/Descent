@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="ExtraData" load_steps=10 format=3 uid="uid://cuk0ksm3rs036"]
+
+[ext_resource type="Script" uid="uid://cxiis53celrkx" path="res://Extra/ExtraContentBlock.gd" id="1_ecb"]
+[ext_resource type="Script" uid="uid://b60j8hvtsxx31" path="res://Extra/ExtraData.gd" id="2_ed"]
+[ext_resource type="Texture2D" uid="uid://yic0d21p2ixu" path="res://Extra/frederique_example/Frederique_Da_Sylva.jpg" id="3_img"]
+[ext_resource type="Texture2D" uid="uid://bc0xu73ugxrw7" path="res://Extra/frederique_example/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg" id="4_img"]
+[ext_resource type="Texture2D" uid="uid://bm8dlbr2q5axl" path="res://Extra/frederique_example/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg" id="5_img"]
+
+[sub_resource type="Resource" id="Resource_text"]
+script = ExtResource("1_ecb")
+text_content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus."
+
+[sub_resource type="Resource" id="Resource_img1"]
+script = ExtResource("1_ecb")
+type = 1
+image_content = ExtResource("4_img")
+
+[sub_resource type="Resource" id="Resource_img2"]
+script = ExtResource("1_ecb")
+type = 1
+text_content = "Texte 3"
+image_content = ExtResource("5_img")
+
+[sub_resource type="Resource" id="Resource_2rniw"]
+script = ExtResource("1_ecb")
+text_content = "texte test présentation personnage
+"
+metadata/_custom_type_script = "uid://cxiis53celrkx"
+
+[resource]
+script = ExtResource("2_ed")
+title = "Design de Frédérique"
+thumbnail = ExtResource("3_img")
+context_text = "Développement visuel du personnage de Frédérique. Différentes pistes explorées durant la pré-production."
+content_blocks = Array[ExtResource("1_ecb")]([SubResource("Resource_text"), SubResource("Resource_img1"), SubResource("Resource_img2"), SubResource("Resource_2rniw")])
+is_unlocked = true

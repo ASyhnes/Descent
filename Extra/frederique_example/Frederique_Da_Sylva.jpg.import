@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm8dlbr2q5axl"
-path="res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg-421c1ad638d3a29c082fc45ee40e188b.ctex"
+uid="uid://yic0d21p2ixu"
+path="res://.godot/imported/Frederique_Da_Sylva.jpg-d35b94ef9dda6d11aaf52a91922a412b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Extra/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg"
-dest_files=["res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg-421c1ad638d3a29c082fc45ee40e188b.ctex"]
+source_file="res://Extra/frederique_example/Frederique_Da_Sylva.jpg"
+dest_files=["res://.godot/imported/Frederique_Da_Sylva.jpg-d35b94ef9dda6d11aaf52a91922a412b.ctex"]
 
 [params]
 

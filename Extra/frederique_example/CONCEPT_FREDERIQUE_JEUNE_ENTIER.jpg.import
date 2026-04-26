@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv0diptldoikh"
-path="res://.godot/imported/Nyx_Structure (2).png-856c26efe0371851a3010ce48223bcd5.ctex"
+uid="uid://bc0xu73ugxrw7"
+path="res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg-c7c928a93226e7c02c55c1a3b6f5e115.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Extra/Nyx_Structure (2).png"
-dest_files=["res://.godot/imported/Nyx_Structure (2).png-856c26efe0371851a3010ce48223bcd5.ctex"]
+source_file="res://Extra/frederique_example/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg"
+dest_files=["res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg-c7c928a93226e7c02c55c1a3b6f5e115.ctex"]
 
 [params]
 

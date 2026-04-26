@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmhi85p7pxdnc"
-path="res://.godot/imported/Nyx_Structure (1).png-0caacb8f96e5bfdd4db6067421998feb.ctex"
+uid="uid://bm8dlbr2q5axl"
+path="res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg-eccad19ad3fc3f4fa117564cee43e3e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Extra/Nyx_Structure (1).png"
-dest_files=["res://.godot/imported/Nyx_Structure (1).png-0caacb8f96e5bfdd4db6067421998feb.ctex"]
+source_file="res://Extra/frederique_example/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg"
+dest_files=["res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg-eccad19ad3fc3f4fa117564cee43e3e8.ctex"]
 
 [params]
 

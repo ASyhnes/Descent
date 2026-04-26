@@ -52,7 +52,9 @@ func _ready():
 	btn_nouvelle_partie.pressed.connect(_sur_nouvelle_partie_pressee)
 	btn_continuer.pressed.connect(load_menu_instance.ouvrir)
 	btn_options.pressed.connect(_sur_bouton_invalide_presse)
-	btn_extras.pressed.connect(_sur_bouton_invalide_presse)
+	btn_extras.pressed.connect(_sur_extras_presse)
+	
+	load_menu_instance.menu_closed.connect(func(): if btn_continuer: btn_continuer.grab_focus())
 
 func _input(event):
 	# Si le joueur appuie sur une touche et que le menu n'est pas encore là
@@ -83,3 +85,6 @@ func _sur_bouton_invalide_presse():
 	# Bruitage style FF7 pour les options non disponibles
 	if son_erreur:
 		son_erreur.play()
+
+func _sur_extras_presse():
+	get_tree().change_scene_to_file("res://Extra/ExtraMenu.tscn")

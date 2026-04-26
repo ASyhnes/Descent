@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal menu_closed
+
 @onready var slot1_btn = $Panel/VBoxContainer/Slot1
 @onready var slot2_btn = $Panel/VBoxContainer/Slot2
 @onready var slot3_btn = $Panel/VBoxContainer/Slot3
@@ -27,3 +29,4 @@ func _on_slot_pressed(slot_id: int):
 
 func fermer():
 	hide()
+	menu_closed.emit()
