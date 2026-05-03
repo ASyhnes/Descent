@@ -16,3 +16,7 @@ Cet annuaire répertorie tous les fichiers `.md` présents dans le projet.
 
 ## 🎵 Audio & Conception Sonore
 - [[musique|Conception Sonore & Musique]] : Annuaire des musiques et sons utilisés, crédits de Johann Scott, et planification de la production audio.
+
+## 📝 Brouillons & Fichiers Temporaires
+- [[tmp_memoire|Brouillon : Système de Mémoire]] : Ancien document brut servant de base au système de mémoire.
+- [[tmp_particules|Brouillon : Particules & UI]] : Ancien document brut de travail pour le nuage de particules.
