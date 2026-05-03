@@ -13,3 +13,6 @@ Cet annuaire répertorie tous les fichiers `.md` présents dans le projet.
 ## 🎨 Effets Visuels & Particules
 - [[nuage_particules_physique|Physique du Nuage de Particules — ColorCloud]] : Explications sur les paramètres de particules, le sub-viewport et les shaders liés au nuage de couleur.
 - [[particules_ui_collisions|Système de Particules, UI et Collisions]] : Logique du nuage (déplacement élastique, double lissage `lerp`) et de la `PerceptionArea` qui le suit.
+
+## 🎵 Audio & Conception Sonore
+- [[musique|Conception Sonore & Musique]] : Annuaire des musiques et sons utilisés, crédits de Johann Scott, et planification de la production audio.

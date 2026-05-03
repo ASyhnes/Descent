@@ -29,7 +29,7 @@ func configurer(data: ExtraData):
 		lock_overlay.hide()
 		# disabled = false
 
-var error_sound = preload("res://sound/Ambiance/freesound_community-error-sound-39539.mp3")
+var error_sound = preload("res://sound/Ambiance/error.mp3")
 var ok_sound = preload("res://sound/Ambiance/OK.mp3")
 
 func _on_pressed():
