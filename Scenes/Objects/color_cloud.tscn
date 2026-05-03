@@ -24,10 +24,10 @@ fill_to = Vector2(1, 0.5)
 shader = ExtResource("3_gnpdx")
 shader_parameter/target_pos = Vector2(0, 0)
 shader_parameter/springiness = 20.0
-shader_parameter/damping = 2.0
+shader_parameter/damping = 1.0
 shader_parameter/randomness = 1000.0
-shader_parameter/cloud_spread = 50.0
-shader_parameter/particle_scale = 0.07
+shader_parameter/cloud_spread = 25.0
+shader_parameter/particle_scale = 0.1
 shader_parameter/fade_distance = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gnpdx"]
@@ -56,19 +56,17 @@ size = Vector2i(2000, 2000)
 [node name="GPUParticles2D" type="GPUParticles2D" parent="MaskViewport"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_sxyrn")
-rotation = -4.5727625
-skew = -0.6632251
-emitting = false
-amount = 100
+rotation = 6.2831855
+amount = 600
+amount_ratio = 0.6537
 texture = SubResource("GradientTexture2D_sxyrn")
-lifetime = 600.0
-interp_to_end = 0.128
-one_shot = true
+lifetime = 0.45
+interp_to_end = 0.938
 preprocess = 1.0
-speed_scale = 0.5
-explosiveness = 1.0
-randomness = 0.09
-collision_base_size = 12.27
+speed_scale = 0.85
+explosiveness = 0.14
+randomness = 0.55
+collision_base_size = 56.26
 process_material = SubResource("ShaderMaterial_26cxe")
 
 [node name="CoreMask" type="Sprite2D" parent="MaskViewport"]

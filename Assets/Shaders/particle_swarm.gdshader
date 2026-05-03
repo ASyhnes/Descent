@@ -2,9 +2,9 @@ shader_type particles;
 
 // --- PARAMÈTRES (Visibles dans l'Inspecteur Godot) ---
 uniform vec2 target_pos;
-uniform float springiness = 1.0; // (la force du ressort) : Plus elle est haute, plus les particules reviennent vite vers la cible.
-uniform float damping = 1000.0;      // Freinage / Amortissement : (l'amortissement) : C'est la force de friction. Plus elle est haute, plus elle "freine" les particules pour les empêcher de dépasser la cible.
-uniform float randomness = 5; // Force du frétillement
+uniform float springiness = 20.0; // Force de l'élastique
+uniform float damping = 4.0;      // Freinage / Amortissement
+uniform float randomness = 200.0; // Force du frétillement
 uniform float cloud_spread = 60.0; // Rayon d'apparition max
 uniform float particle_scale = 0.5; // Taille visuelle des particules
 uniform float fade_distance = 40.0; // Distance où la particule devient 100% invisible
