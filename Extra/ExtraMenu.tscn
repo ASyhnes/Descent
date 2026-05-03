@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://bjwgybsjcbomv" path="res://Extra/ExtraMenu.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dp1x824m2e" path="res://Extra/ExtraDetailsPage.tscn" id="2"]
 [ext_resource type="Script" uid="uid://b60j8hvtsxx31" path="res://Extra/ExtraData.gd" id="3_data"]
-[ext_resource type="Resource" uid="uid://cuk0ksm3rs036" path="res://Extra/frederique_example/frederique_example.tres" id="4_example"]
-[ext_resource type="Resource" path="res://Extra/nyx_example/nyx_example.tres" id="5_nyx"]
+[ext_resource type="Resource" uid="uid://cuk0ksm3rs036" path="res://Extra/frederique_da_sylva/frederique_da_sylva.tres" id="4_example"]
+[ext_resource type="Resource" path="res://Extra/nyx/nyx.tres" id="5_nyx"]
 [ext_resource type="Resource" path="res://Extra/mycelium/mycelium.tres" id="6_40bs3"]
-[ext_resource type="Resource" path="res://Extra/bas_fond_example/bas_fond_example.tres" id="6_bas"]
+[ext_resource type="Resource" path="res://Extra/bas_fond/bas_fond.tres" id="6_bas"]
 
 [node name="ExtraMenu" type="Control"]
 layout_mode = 3

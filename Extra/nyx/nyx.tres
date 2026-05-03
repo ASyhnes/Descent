@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cxiis53celrkx" path="res://Extra/ExtraContentBlock.gd" id="1_ecb"]
 [ext_resource type="Script" uid="uid://b60j8hvtsxx31" path="res://Extra/ExtraData.gd" id="2_ed"]
-[ext_resource type="Texture2D" uid="uid://bmhi85p7pxdnc" path="res://Extra/nyx_example/Nyx_Structure (1).png" id="3_img"]
-[ext_resource type="Texture2D" uid="uid://bv0diptldoikh" path="res://Extra/nyx_example/Nyx_Structure (2).png" id="4_img"]
-[ext_resource type="Texture2D" uid="uid://dq1q0fm0jw6qd" path="res://Extra/nyx_example/Nyx_Structure (3).png" id="5_img"]
+[ext_resource type="Texture2D" uid="uid://bmhi85p7pxdnc" path="res://Extra/nyx/Nyx_Structure (1).png" id="3_img"]
+[ext_resource type="Texture2D" uid="uid://bv0diptldoikh" path="res://Extra/nyx/Nyx_Structure (2).png" id="4_img"]
+[ext_resource type="Texture2D" uid="uid://dq1q0fm0jw6qd" path="res://Extra/nyx/Nyx_Structure (3).png" id="5_img"]
 
 [sub_resource type="Resource" id="Resource_text"]
 script = ExtResource("1_ecb")

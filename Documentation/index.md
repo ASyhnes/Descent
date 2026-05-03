@@ -20,3 +20,9 @@ Cet annuaire répertorie tous les fichiers `.md` présents dans le projet.
 ## 📝 Brouillons & Fichiers Temporaires
 - [[tmp_memoire|Brouillon : Système de Mémoire]] : Ancien document brut servant de base au système de mémoire.
 - [[tmp_particules|Brouillon : Particules & UI]] : Ancien document brut de travail pour le nuage de particules.
+
+## 🖼️ Extras & Contenus Annexes
+- [[bas_fond|Extra : Bas Fond]] : Notes de conception sur l'extra Bas Fond.
+- [[frederique_da_sylva|Extra : Frédérique Da Sylva]] : Notes de conception sur l'extra Frédérique.
+- [[mycelium|Extra : Mycélium]] : Notes de conception sur l'extra Mycélium.
+- [[nyx|Extra : Nyx]] : Notes de conception sur l'extra Nyx.

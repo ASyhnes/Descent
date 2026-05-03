@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cxiis53celrkx" path="res://Extra/ExtraContentBlock.gd" id="1_ecb"]
 [ext_resource type="Script" uid="uid://b60j8hvtsxx31" path="res://Extra/ExtraData.gd" id="2_ed"]
-[ext_resource type="Texture2D" uid="uid://yic0d21p2ixu" path="res://Extra/frederique_example/Frederique_Da_Sylva.jpg" id="3_img"]
-[ext_resource type="Texture2D" uid="uid://ivqrtrgtas8w" path="res://Extra/frederique_example/fred_1.jpg" id="4_ccrb2"]
-[ext_resource type="Texture2D" uid="uid://bc0xu73ugxrw7" path="res://Extra/frederique_example/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg" id="4_img"]
-[ext_resource type="Texture2D" uid="uid://bm8dlbr2q5axl" path="res://Extra/frederique_example/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg" id="5_img"]
-[ext_resource type="Texture2D" uid="uid://b4647s65wj8hv" path="res://Extra/frederique_example/fred_3.jpg" id="5_op0tb"]
+[ext_resource type="Texture2D" uid="uid://yic0d21p2ixu" path="res://Extra/frederique_da_sylva/Frederique_Da_Sylva.jpg" id="3_img"]
+[ext_resource type="Texture2D" uid="uid://ivqrtrgtas8w" path="res://Extra/frederique_da_sylva/fred_1.jpg" id="4_ccrb2"]
+[ext_resource type="Texture2D" uid="uid://bc0xu73ugxrw7" path="res://Extra/frederique_da_sylva/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg" id="4_img"]
+[ext_resource type="Texture2D" uid="uid://bm8dlbr2q5axl" path="res://Extra/frederique_da_sylva/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg" id="5_img"]
+[ext_resource type="Texture2D" uid="uid://b4647s65wj8hv" path="res://Extra/frederique_da_sylva/fred_3.jpg" id="5_op0tb"]
 
 [sub_resource type="Resource" id="Resource_text"]
 script = ExtResource("1_ecb")
