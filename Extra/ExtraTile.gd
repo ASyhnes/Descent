@@ -30,6 +30,7 @@ func configurer(data: ExtraData):
 		# disabled = false
 
 var error_sound = preload("res://sound/Ambiance/freesound_community-error-sound-39539.mp3")
+var ok_sound = preload("res://sound/Ambiance/OK.mp3")
 
 func _on_pressed():
 	var extra_est_debloque = mon_data and mon_data.is_unlocked
@@ -37,6 +38,13 @@ func _on_pressed():
 		extra_est_debloque = extra_est_debloque or ExtraManager.est_debloque(mon_data.extra_id)
 		
 	if extra_est_debloque:
+		# Jouer le son de succès
+		var audio_player = AudioStreamPlayer.new()
+		audio_player.stream = ok_sound
+		add_child(audio_player)
+		audio_player.play()
+		audio_player.finished.connect(audio_player.queue_free)
+		
 		tile_selectionnee.emit(mon_data)
 	else:
 		# Jouer le son d'erreur
