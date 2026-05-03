@@ -5,6 +5,7 @@ Cet annuaire répertorie tous les fichiers `.md` présents dans le projet.
 
 ## 📖 Global
 - [[README|Descent (Volume 0) — Other Frequencies]] : Le point d'entrée principal du projet (situé à la racine).
+- [[todo|Liste de tâches (TODO)]] : Liste de toutes les tâches de développement en cours ou prévues.
 
 ## ⚙️ Systèmes de Jeu
 - [[systeme_memoire_interaction|Système de Mémoire et d'Interaction]] : Documentation de conception sur la logique d'interaction (top-down RPG), le raycasting et la mémorisation des objets.
