@@ -22,7 +22,12 @@ Cet annuaire répertorie tous les fichiers `.md` présents dans le projet.
 - [[tmp_particules|Brouillon : Particules & UI]] : Ancien document brut de travail pour le nuage de particules.
 
 ## 🖼️ Extras & Contenus Annexes
+
+### Lore
 - [[bas_fond|Extra : Bas Fond]] : Notes de conception sur l'extra Bas Fond.
 - [[frederique_da_sylva|Extra : Frédérique Da Sylva]] : Notes de conception sur l'extra Frédérique.
 - [[mycelium|Extra : Mycélium]] : Notes de conception sur l'extra Mycélium.
 - [[nyx|Extra : Nyx]] : Notes de conception sur l'extra Nyx.
+
+### Présentation du projet
+*(Les documents de présentation de projet apparaîtront ici)*
