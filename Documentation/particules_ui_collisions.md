@@ -3,50 +3,43 @@
 ## 1. SYSTÈME DE NUAGE DE PARTICULES (CHAMP DE VISION)
 
 **Objectif du système :**
-Créer un effet visuel ("Color Cloud" ou Champ de vision) géré par un Shader, qui suit le personnage de manière fluide (avec inertie), réagit aux mouvements, et s'écrase de façon réaliste contre les murs du décor.
+Créer un effet visuel ("Color Cloud" ou Champ de vision) géré par un Shader, qui suit le personnage de manière fluide (avec inertie) et réagit aux mouvements du joueur.
 
 **Concepts clés de la physique du nuage :**
 - **Delta Time (`delta`)** : Utilisé pour calculer la vitesse réelle du joueur (`Vitesse = Distance / delta`). Cela permet au nuage de réagir intelligemment aux collisions réelles du joueur (ex: s'il est poussé ou bloqué).
 - **Combinaison de forces** : Le nuage est tiré par deux forces : la vélocité réelle (vitesse de déplacement) et l'intention (la touche pressée sur le clavier, via `smoothed_input`). Cela permet au nuage de "pousser" visuellement dans une direction même si le joueur court contre un mur.
 - **La Laisse (`limit_length`)** : La distance maximale entre le joueur et le centre du nuage est bornée par `limit_length(max_stretch)`. Cela empêche le nuage de s'étirer à l'infini.
-- **Le Raycasting (Anti-traversée des murs)** : 
-  - Pour empêcher le nuage visuel de traverser les murs, un rayon physique (`PhysicsRayQueryParameters2D`) est lancé entre le joueur et la cible du nuage.
-  - Si le rayon percute un obstacle (mur), la position cible finale du nuage (`final_target_pos`) est bloquée sur le point d'impact.
-  - Le paramètre `cloud_spread` (rayon d'étalement des particules) est réduit dynamiquement via un `clamp()` en fonction de la distance au mur, donnant l'impression que le nuage "s'écrase" contre la paroi.
+- **Double lissage (Lerp)** : La vélocité est lissée avec un coefficient `5.0`, et l'intention directionnelle avec un coefficient `15.0`. Cela crée un effet élastique naturel où le nuage suit le joueur avec inertie.
+- **PerceptionArea** : Une zone circulaire physique (`Area2D`) se déplace avec le nuage visuel. Les `InteractableItem` détectent cette zone pour s'illuminer.
 
 **Script consolidé de la gestion du nuage (`_process`) :**
 ```gdscript
-# Calcul de la vitesse et de la cible
+# 1. Calcul de la vitesse réelle (lissée)
 var actual_velocity = (current_pos - last_target_pos) / delta
 last_target_pos = current_pos 
 smoothed_velocity = smoothed_velocity.lerp(actual_velocity, 5.0 * delta)
+
+# 2. Intention directionnelle (lissée)
+var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+smoothed_input = smoothed_input.lerp(input_dir, 15.0 * delta)
+
+# 3. Position cible = position joueur + offset + étirement
 var target_pos = current_pos + base_offset
 var total_stretch = (smoothed_velocity * anticipation_factor) + (smoothed_input * intent_push_force)
 total_stretch = total_stretch.limit_length(max_stretch)
 target_pos += total_stretch
 
-# Détection des murs (Raycast)
-var space_state = get_world_2d().direct_space_state
-var query = PhysicsRayQueryParameters2D.create(current_pos, target_pos)
-if target is CollisionObject2D:
-    query.exclude = [target.get_rid()]
+# 4. Déplacement de la zone de détection
+perception_area.global_position = target_pos
 
-var hit_result = space_state.intersect_ray(query)
-var final_target_pos = target_pos
-var current_spread = 60.0 
-
-if hit_result:
-    final_target_pos = hit_result.position
-    var distance_au_mur = current_pos.distance_to(hit_result.position)
-    current_spread = clamp(distance_au_mur * 0.8, 15.0, 60.0) 
-
-# Envoi des données au Shader (GPU)
+# 5. Envoi des données au Shader (GPU)
 if particles and particles.process_material is ShaderMaterial:
-    particles.process_material.set_shader_parameter("target_pos", final_target_pos)
-    particles.process_material.set_shader_parameter("cloud_spread", current_spread)
+    particles.process_material.set_shader_parameter("target_pos", target_pos)
     var fake_velocity_for_cone = smoothed_velocity + (smoothed_input * 200.0)
     particles.process_material.set_shader_parameter("player_velocity", fake_velocity_for_cone)
 ```
+
+> **Note historique :** Un système de raycasting anti-murs (`PhysicsRayQueryParameters2D`) avait été envisagé pour empêcher le nuage de traverser les murs, mais il n'est pas implémenté dans la version actuelle.
 
 ## 2. SYNCHRONISATION DU MASQUE VISUEL (CLONAGE)
 Pour que les effets de particules (SubViewport) interagissent avec le sprite du joueur, il faut un "clone" parfait de l'animation du joueur en temps réel.
