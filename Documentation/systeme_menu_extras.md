@@ -50,3 +50,25 @@ Pour que votre nouvel Extra apparaisse dans le jeu :
 4. Augmentez sa taille de 1 et glissez l'élément `.tres` que vous venez de créer dans la nouvelle ligne (ou ajoutez le directement par glisser-déposer depuis l'explorateur). 
 
 C'est tout ! Au prochain lancement du jeu, la tuile va s'afficher d'elle-même !
+
+---
+
+## 3. Comment débloquer un Extra depuis le jeu ?
+
+Par défaut, si l'Extra est marqué avec `Is Unlocked = false`, il sera grisé dans le menu. Pour le débloquer lors d'un événement du jeu (par exemple, en lisant une affiche), le système utilise un **Autoload** appelé `ExtraManager`.
+
+### Étape A : Configurer l'ID de l'Extra
+1. Dans la ressource `.tres` de votre Extra, donnez-lui un identifiant unique en minuscules et sans espaces dans le champ **`Extra Id`** (ex: `mycelium`).
+2. Assurez-vous que **`Is Unlocked`** est décoché (sinon il est toujours débloqué).
+
+### Étape B : Lier l'Extra à un objet interactif
+Actuellement, les **Affiches Interactibles** (`AfficheInteractible` - `interaction_affiche.gd`) supportent ce mécanisme :
+1. Sélectionnez le nœud de l'affiche dans votre scène (ex: `Affiches/Micelium`).
+2. Dans l'inspecteur, cherchez le champ **`Extra Id A Debloquer`**.
+3. Tapez exactement l'ID configuré plus tôt (ex: `mycelium`).
+
+Lorsque le joueur aura lu toutes les pages de l'affiche, l'extra sera débloqué en mémoire, et une petite notification visuelle ("Extra Mycélium débloqué") apparaîtra en bas de l'écran.
+
+### Étape C : Persistance de la sauvegarde
+L'état des extras débloqués est **automatiquement inclus dans la sauvegarde globale du jeu**. 
+Lorsque le joueur va ensuite utiliser un Point de Sauvegarde, le déblocage de l'extra sera écrit dans le fichier `slot_X.save`. Au prochain lancement du jeu, l'`ExtraManager` récupérera cette information pour que l'Extra soit toujours accessible dans le menu.

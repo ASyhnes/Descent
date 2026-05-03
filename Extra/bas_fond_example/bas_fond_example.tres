@@ -1,12 +1,11 @@
-[gd_resource type="Resource" script_class="ExtraData" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="ExtraData" load_steps=5 format=3 uid="uid://bv01vfd8sbtal"]
 
-[ext_resource type="Script" path="res://Extra/ExtraContentBlock.gd" id="1_ecb"]
-[ext_resource type="Script" path="res://Extra/ExtraData.gd" id="2_ed"]
-[ext_resource type="Texture2D" path="res://Extra/bas_fond_example/QUARTIER BAS FOND.jpg" id="3_img"]
+[ext_resource type="Script" uid="uid://cxiis53celrkx" path="res://Extra/ExtraContentBlock.gd" id="1_ecb"]
+[ext_resource type="Script" uid="uid://b60j8hvtsxx31" path="res://Extra/ExtraData.gd" id="2_ed"]
+[ext_resource type="Texture2D" uid="uid://cwkbqptp1mdvc" path="res://Extra/bas_fond_example/QUARTIER BAS FOND.jpg" id="3_img"]
 
 [sub_resource type="Resource" id="Resource_text"]
 script = ExtResource("1_ecb")
-type = 0
 text_content = "Illustration du Quartier Bas Fond, une zone dense et complexe montrant la stratification de la ville et l'atmosphère sombre du niveau."
 
 [resource]
@@ -15,4 +14,3 @@ title = "Quartier Bas Fond"
 thumbnail = ExtResource("3_img")
 context_text = "Développement des décors pour les quartiers inférieurs."
 content_blocks = Array[ExtResource("1_ecb")]([SubResource("Resource_text")])
-is_unlocked = false

@@ -3,6 +3,7 @@ extends Area2D
 
 @export var pages_de_texte : Array[String] = ["Texte par défaut"]
 @export_enum("Haut", "Bas", "Gauche", "Droite", "Peu importe") var direction_requise : String = "Haut"
+@export var extra_id_a_debloquer : String = ""
 
 var joueur_proche : bool = false
 var joueur_ref = null
@@ -55,6 +56,10 @@ func _page_suivante():
 		dialogue_actif = false
 		page_actuelle = 0
 		DialogueManager.fermer()
+		
+		# Débloquer l'extra si configuré
+		if extra_id_a_debloquer != "" and ExtraManager:
+			ExtraManager.debloquer(extra_id_a_debloquer, extra_id_a_debloquer.capitalize())
 
 # --- SIGNAUX DE PROXIMITÉ ---
 

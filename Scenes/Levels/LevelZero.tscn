@@ -4489,6 +4489,7 @@ shape = SubResource("RectangleShape2D_n7ghd")
 [node name="Micelium" type="Area2D" parent="Affiches"]
 script = ExtResource("9_b26j0")
 pages_de_texte = Array[String](["Le mycelium... J'en ai pas mal entendu parlé.", "Ils pensent vraiment pouvoir traiter ", "tout les déchets avec un champignon \"intelligent\" booster à l'IA?"])
+extra_id_a_debloquer = "mycelium"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Affiches/Micelium"]
 position = Vector2(72, 181.25)

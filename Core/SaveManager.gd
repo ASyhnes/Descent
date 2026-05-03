@@ -54,6 +54,10 @@ func save_game(slot_id: int, player_node: Node2D):
 		if child is SequenceDoor:
 			save_data["doors_data"][child.name] = child.is_open
 			
+	# Sauvegarder les extras
+	if ExtraManager:
+		save_data["extras_data"] = ExtraManager.obtenir_donnees_sauvegarde()
+			
 	var json_string = JSON.stringify(save_data)
 	var file = FileAccess.open(get_save_path(slot_id), FileAccess.WRITE)
 	if file:
@@ -106,6 +110,10 @@ func apply_load(level_node: Node):
 					door.collision.set_deferred("disabled", true)
 					door.animhaut.play("open")
 					door.animbas.play("open2")
+					
+	# 4. Charger les extras
+	if pending_load_data.has("extras_data") and ExtraManager:
+		ExtraManager.charger_etat(pending_load_data["extras_data"])
 					
 	# On vide les données pour ne pas qu'un restart les réutilise par erreur
 	pending_load_data = null

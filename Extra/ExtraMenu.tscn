@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c38xkkasux"]
+[gd_scene load_steps=8 format=3 uid="uid://c38xkkasux"]
 
-[ext_resource type="Script" path="res://Extra/ExtraMenu.gd" id="1"]
+[ext_resource type="Script" uid="uid://bjwgybsjcbomv" path="res://Extra/ExtraMenu.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dp1x824m2e" path="res://Extra/ExtraDetailsPage.tscn" id="2"]
-[ext_resource type="Script" path="res://Extra/ExtraData.gd" id="3_data"]
-[ext_resource type="Resource" path="res://Extra/frederique_example/frederique_example.tres" id="4_example"]
+[ext_resource type="Script" uid="uid://b60j8hvtsxx31" path="res://Extra/ExtraData.gd" id="3_data"]
+[ext_resource type="Resource" uid="uid://cuk0ksm3rs036" path="res://Extra/frederique_example/frederique_example.tres" id="4_example"]
 [ext_resource type="Resource" path="res://Extra/nyx_example/nyx_example.tres" id="5_nyx"]
+[ext_resource type="Resource" path="res://Extra/mycelium/mycelium.tres" id="6_40bs3"]
 [ext_resource type="Resource" path="res://Extra/bas_fond_example/bas_fond_example.tres" id="6_bas"]
 
 [node name="ExtraMenu" type="Control"]
@@ -15,7 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
-extra_resources = Array[ExtResource("3_data")]([ExtResource("4_example"), ExtResource("5_nyx"), ExtResource("6_bas")])
+extra_resources = Array[ExtResource("3_data")]([ExtResource("4_example"), ExtResource("5_nyx"), ExtResource("6_bas"), ExtResource("6_40bs3")])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -24,7 +25,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 1, 1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -33,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
 [node name="Header" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
