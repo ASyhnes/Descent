@@ -6,12 +6,15 @@
 
 ### Musiques (Dossier `sound/music/`)
 - **`song_1.mp3`** : Jouée sur l'écran titre (`ecran_titre.tscn`) pour installer l'ambiance dès le lancement du jeu.
+  <audio controls src="../sound/music/song_1.mp3"></audio>
 
 ### Sons d'Ambiance et UI (Dossier `sound/Ambiance/`)
 - **`error.mp3`** : 
   - Joué dans le menu `Extra` lorsque le joueur clique sur une tuile verrouillée.
   - Joué sur l'écran titre lors d'une action invalide (ex: tentative de charger une partie sur un emplacement vide).
+  <audio controls src="../sound/Ambiance/error.mp3"></audio>
 - **`OK.mp3`** : Joué dans le menu `Extra` lorsque le joueur clique sur une tuile valide/débloquée.
+  <audio controls src="../sound/Ambiance/OK.mp3"></audio>
 - *Autres sons à définir...*
 
 ---
