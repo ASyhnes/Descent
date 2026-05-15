@@ -27,5 +27,10 @@ Cet annuaire répertorie tous les fichiers `.md` présents dans le projet.
 - [[mycelium|Extra : Mycélium]] : Notes de conception sur l'extra Mycélium.
 - [[nyx|Extra : Nyx]] : Notes de conception sur l'extra Nyx.
 
+### Ecriture niveaux
+- [[Niveau de test|Niveau Test]] : Niveau ayant pour objectif de tester les mécaniques de jeux
+- [[Niveau 1|Niveau 1]] : Niveau d'introduction au Lore et didacticiel
 ### Présentation du projet
 *(Les documents de présentation de projet apparaîtront ici)*
+
+## Planning à venir

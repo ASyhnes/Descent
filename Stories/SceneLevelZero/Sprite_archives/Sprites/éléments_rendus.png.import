@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm8dlbr2q5axl"
-path="res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg-c8fac8c3479aa50e38a03e1ab180ba79.ctex"
+uid="uid://dyrcp5w44atix"
+path="res://.godot/imported/éléments_rendus.png-4e750d244af88abd9de2fd5b283ecd86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Extra/frederique_da_sylva/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg"
-dest_files=["res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_SILABAIRE.jpg-c8fac8c3479aa50e38a03e1ab180ba79.ctex"]
+source_file="res://Stories/SceneLevelZero/Sprite_archives/Sprites/éléments_rendus.png"
+dest_files=["res://.godot/imported/éléments_rendus.png-4e750d244af88abd9de2fd5b283ecd86.ctex"]
 
 [params]
 

@@ -14,6 +14,7 @@ Voici l'ensemble des tâches prévues pour le développement du projet :
 - [ ] Réfléchir aux niveaux 1, 2 et 3 de difficulté du didacticiel.
 - [ ] Prévoir le Hub central.
 - [ ] Prévoir le "Level 1 test".
+- [ ] Prévoir la mécanique "priorisation" qui permet de refuser une mise en mémoire. "il faut que tu apprenne à dire non!"
 
 ## 📖 Lore & Contenu
 - [ ] Mettre à jour les extras.

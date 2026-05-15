@@ -2,6 +2,12 @@
 
 *Musique composée par Johann Scott.*
 
+## Inspirations
+La direction musicale s'inspire de textures sombres et enveloppantes, avec une ambiance à la fois introspective, cinématographique et légèrement mystérieuse. L'objectif est de soutenir l'exploration, la tension et la narration sans prendre le dessus sur l'expérience de jeu.
+
+### - **Référence d'inspiration** : 
+_ - **`Gui borato chromophobia`** : [Open Spotify Track](https://open.spotify.com/intl-fr/track/435zKMtKQsLt5rJ3lHwWBQ?si=306e82d2e49648ea)
+
 ## Utilisation des Sons et Musiques
 
 ### Musiques (Dossier `sound/music/`)

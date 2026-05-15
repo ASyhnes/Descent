@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yic0d21p2ixu"
-path="res://.godot/imported/Frederique_Da_Sylva.jpg-d35b94ef9dda6d11aaf52a91922a412b.ctex"
+path="res://.godot/imported/Frederique_Da_Sylva.jpg-39ef8066bee6c5891dd2161aabb3c83b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Extra/frederique_example/Frederique_Da_Sylva.jpg"
-dest_files=["res://.godot/imported/Frederique_Da_Sylva.jpg-d35b94ef9dda6d11aaf52a91922a412b.ctex"]
+source_file="res://Extra/frederique_da_sylva/Frederique_Da_Sylva.jpg"
+dest_files=["res://.godot/imported/Frederique_Da_Sylva.jpg-39ef8066bee6c5891dd2161aabb3c83b.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://deuk8kfx4i1f3"
-path="res://.godot/imported/freesound_community-error-sound-39539.mp3-9dc59113c3e3dd68b13b07dba8438f05.mp3str"
+path="res://.godot/imported/error.mp3-4e802e374383a3789506646b50b21297.mp3str"
 
 [deps]
 
-source_file="res://sound/Ambiance/freesound_community-error-sound-39539.mp3"
-dest_files=["res://.godot/imported/freesound_community-error-sound-39539.mp3-9dc59113c3e3dd68b13b07dba8438f05.mp3str"]
+source_file="res://sound/Ambiance/error.mp3"
+dest_files=["res://.godot/imported/error.mp3-4e802e374383a3789506646b50b21297.mp3str"]
 
 [params]
 

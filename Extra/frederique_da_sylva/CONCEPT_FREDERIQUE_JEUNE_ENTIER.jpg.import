@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc0xu73ugxrw7"
-path="res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg-c7c928a93226e7c02c55c1a3b6f5e115.ctex"
+path="res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg-0fbebe9a656554d8652ea8f795e6f2d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Extra/frederique_example/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg"
-dest_files=["res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg-c7c928a93226e7c02c55c1a3b6f5e115.ctex"]
+source_file="res://Extra/frederique_da_sylva/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg"
+dest_files=["res://.godot/imported/CONCEPT_FREDERIQUE_JEUNE_ENTIER.jpg-0fbebe9a656554d8652ea8f795e6f2d6.ctex"]
 
 [params]
 
